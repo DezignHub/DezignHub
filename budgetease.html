@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dez Sima | Budgeting App Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .prototype-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #f8fafc;
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .prototype-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .app-screen {
+            transition: all 0.3s ease;
+        }
+        .app-screen:hover {
+            transform: translateY(-8px);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="C:\Users\despi\OneDrive\Documents\Portfolio\Home-page.html" class="text-xl font-bold text-indigo-600">Dez Sima</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#overview" class="text-gray-500 hover:text-indigo-600 transition">Overview</a>
+                    <a href="#research" class="text-gray-500 hover:text-indigo-600 transition">Research</a>
+                    <a href="#design" class="text-gray-500 hover:text-indigo-600 transition">Design</a>
+                    <a href="#prototype" class="text-gray-500 hover:text-indigo-600 transition">Prototype</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="menu-toggle" class="text-gray-500 hover:text-indigo-600">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#overview" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Overview</a>
+            <a href="#research" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Research</a>
+            <a href="#design" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Design</a>
+            <a href="#prototype" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Prototype</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-up">BudgetEase</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+                A personal budgeting app designed to simplify financial management through intuitive UX
+            </p>
+            <a href="budgetease-prototype.html" class="inline-block bg-white text-indigo-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                View Prototype
+            </a>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up">Project Overview</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    BudgetEase helps users track expenses, set financial goals, and gain insights into their spending habits with a clean, user-friendly interface.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm" data-aos="fade-up">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="target" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Challenge</h3>
+                    <p class="text-gray-600">Existing budgeting apps were either too complex or lacked meaningful insights, causing users to abandon them quickly.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="lightbulb" class="text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Solution</h3>
+                    <p class="text-gray-600">A simplified budgeting experience with visual data, smart categorization, and gentle financial guidance.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="award" class="text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Impact</h3>
+                    <p class="text-gray-600">User testing showed 78% improvement in financial awareness and 65% increase in budget adherence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up">User Research</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Understanding pain points and behaviors was crucial to designing an effective solution.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-4">Key Findings</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-indigo-600 mr-3 mt-1">
+                                <i data-feather="check-circle"></i>
+                            </div>
+                            <p class="text-gray-600">72% of users abandoned budgeting apps within 2 weeks due to complexity</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-indigo-600 mr-3 mt-1">
+                                <i data-feather="check-circle"></i>
+                            </div>
+                            <p class="text-gray-600">Users wanted "set and forget" functionality with periodic check-ins</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-indigo-600 mr-3 mt-1">
+                                <i data-feather="check-circle"></i>
+                            </div>
+                            <p class="text-gray-600">Visual representations of spending were more effective than raw numbers</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-indigo-600 mr-3 mt-1">
+                                <i data-feather="check-circle"></i>
+                            </div>
+                            <p class="text-gray-600">Users responded better to positive reinforcement than warnings</p>
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="http://static.photos/finance/640x360/1" alt="User research session" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up">
+                <h3 class="text-2xl font-semibold mb-6">User Persona</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="http://static.photos/people/200x200/1" alt="User persona" class="w-32 h-32 rounded-full mb-4 object-cover">
+                        <h4 class="font-semibold text-lg">Sarah Miller</h4>
+                        <p class="text-gray-500">28 • Marketing Specialist</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="mb-6">
+                            <h4 class="font-medium text-gray-900 mb-2">Goals</h4>
+                            <p class="text-gray-600">"I want to save for a house but I'm not sure where my money goes each month. I need something simple that doesn't feel like work."</p>
+                        </div>
+                        <div class="mb-6">
+                            <h4 class="font-medium text-gray-900 mb-2">Frustrations</h4>
+                            <p class="text-gray-600">"Other apps make me categorize every transaction manually. I don't have time for that."</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-2">Behavior</h4>
+                            <p class="text-gray-600">Checks finances weekly, prefers mobile over desktop, responds well to visual data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Section -->
+    <section id="design" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up">Design Process</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Iterative design focused on simplicity, clarity, and actionable insights.
+                </p>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center" data-aos="fade-up">Wireframes & User Flow</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div data-aos="fade-up" data-aos-delay="0">
+                        <img src="http://static.photos/technology/640x360/1" alt="Wireframe 1" class="rounded-lg shadow-md w-full app-screen">
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <img src="http://static.photos/technology/640x360/2" alt="Wireframe 2" class="rounded-lg shadow-md w-full app-screen">
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <img src="http://static.photos/technology/640x360/3" alt="Wireframe 3" class="rounded-lg shadow-md w-full app-screen">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center" data-aos="fade-up">Visual Design</h3>
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-xl">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div data-aos="fade-right">
+                            <h4 class="text-xl font-semibold mb-4 gradient-text">Color Palette</h4>
+                            <div class="flex space-x-4 mb-6">
+                                <div class="w-16 h-16 rounded-lg bg-indigo-600 shadow"></div>
+                                <div class="w-16 h-16 rounded-lg bg-purple-500 shadow"></div>
+                                <div class="w-16 h-16 rounded-lg bg-pink-400 shadow"></div>
+                                <div class="w-16 h-16 rounded-lg bg-gray-900 shadow"></div>
+                            </div>
+                            <h4 class="text-xl font-semibold mb-4 gradient-text">Typography</h4>
+                            <div class="space-y-2">
+                                <p class="text-2xl font-bold">Inter Bold</p>
+                                <p class="text-xl font-medium">Inter Medium</p>
+                                <p class="text-base">Inter Regular</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-left">
+                            <img src="http://static.photos/technology/640x360/4" alt="Visual design" class="rounded-xl shadow-lg w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-8 text-center" data-aos="fade-up">Final Screens</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div data-aos="fade-up" data-aos-delay="0">
+                        <img src="http://static.photos/technology/320x240/1" alt="Screen 1" class="rounded-lg shadow-md w-full app-screen">
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <img src="http://static.photos/technology/320x240/2" alt="Screen 2" class="rounded-lg shadow-md w-full app-screen">
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <img src="http://static.photos/technology/320x240/3" alt="Screen 3" class="rounded-lg shadow-md w-full app-screen">
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <img src="http://static.photos/technology/320x240/4" alt="Screen 4" class="rounded-lg shadow-md w-full app-screen">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Conclusion -->
+    <section class="py-20 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Project Takeaways</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+                This project reinforced that financial tools don't need to be complex to be effective. By focusing on the core needs of users and presenting information visually, we created an app that people actually want to use regularly.
+            </p>
+        
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dezign Hub</h3>
+                    <p class="text-gray-400">Showcasing impactful design solutions for complex problems.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Work</h4>
+                    <ul class="space-y-2">
+                        <li><a href="case-study-1.html" class="text-gray-400 hover:text-white transition">Fintech</a></li>
+                        <li><a href="case-study-2.html" class="text-gray-400 hover:text-white transition">Healthcare</a></li>
+                        <li><a href="case-study-3.html" class="text-gray-400 hover:text-white transition">E-learning</a></li>
+                        <li><a href="case-study-4.html" class="text-gray-400 hover:text-white transition">E-commerce</a></li>
+                        <li><a href="case-study-5.html" class="text-gray-400 hover:text-white transition">Travel</a></li>
+                        <li><a href="case-study-6.html" class="text-gray-400 hover:text-white transition">Synergy flow</a></li>
+                        <li><a href="Artfolio.html" class="text-gray-400 hover:text-white transition">Artwork</a></li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Experience</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Approach</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="mail"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 UX Portfolio. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>

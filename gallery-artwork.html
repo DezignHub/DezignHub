@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Portfolio | Artwork Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/css/glide.core.min.css">
+    <style>
+        .glide__slide {
+            transition: transform 0.3s ease;
+        }
+        .glide__slide:hover {
+            transform: scale(1.03);
+        }
+        .artwork-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .artwork-img-container {
+            position: relative;
+            padding-bottom: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .artwork-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .artwork-img:hover {
+            transform: scale(1.05);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold gradient-text">ARTFOLIO</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                     <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#work" class="text-gray-700 hover:text-indigo-600 transition">Work</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                </div>
+                    <a href="index.html#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-up">My Artwork Collection</h1>
+            <p class="text-xl md:text-2xl max-w-2xl mx-auto opacity-90" data-aos="fade-up" data-aos-delay="100">
+                Explore my creative journey through these selected pieces
+            </p>
+            <div class="mt-10" data-aos="fade-up" data-aos-delay="200">
+                <a href="#gallery" class="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition inline-flex items-center">
+                    View Gallery <i data-feather="arrow-down" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Artwork Gallery -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Featured Artworks</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    A curated selection of my digital and traditional artwork showcasing different styles and techniques.
+                </p>
+            </div>
+
+            <!-- Carousel -->
+            <div class="glide relative" data-aos="fade-up">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <!-- Artwork 1 -->
+                        <li class="glide__slide px-4">
+                            <div class="artwork-card bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg">
+                                <div class="artwork-img-container">
+                                    <img src="Images\Artwork\487fff25-ef37-493a-88e4-40359ec070c9.png" alt="Abstract Composition" class="artwork-img">
+                                </div>
+                                
+                            </div>
+                        </li>
+                        
+                        <!-- Artwork 2 -->
+                        <li class="glide__slide px-4">
+                            <div class="artwork-card bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg">
+                                <div class="artwork-img-container">
+                                    <img src="Images\Artwork\b798f22a-32c8-4438-9fbe-5dd078a71734 (1).png" alt="Minimal Landscape" class="artwork-img">
+                                </div>
+                               
+                            </div>
+                        </li>
+                        
+                        <!-- Artwork 3 -->
+                        <li class="glide__slide px-4">
+                            <div class="artwork-card bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg">
+                                <div class="artwork-img-container">
+                                    <img src="Images\Artwork\sketch167458691661.png" alt="Futuristic Interface" class="artwork-img">
+                                </div>
+                            
+                            </div>
+                        </li>
+                        
+                        <!-- Artwork 4 -->
+                        <li class="glide__slide px-4">
+                            <div class="artwork-card bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg">
+                                <div class="artwork-img-container">
+                                    <img src="Images\Artwork\sketch1676346504456.png" alt="Portrait Study" class="artwork-img">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Spiderman</h3>
+                            
+                                   
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- Artwork 5 -->
+                        <li class="glide__slide px-4">
+                            <div class="artwork-card bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg">
+                                <div class="artwork-img-container">
+                                    <img src="Images\Artwork\sketch1704217295905.png" alt="Color Gradient" class="artwork-img">
+                                </div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="glide__arrows flex justify-center mt-8 space-x-4" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition" data-glide-dir="<">
+                        <i data-feather="chevron-left" class="text-indigo-600"></i>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition" data-glide-dir=">">
+                        <i data-feather="chevron-right" class="text-indigo-600"></i>
+                    </button>
+                </div>
+                
+                <div class="glide__bullets flex justify-center mt-6 space-x-2" data-glide-el="controls[nav]">
+                    <button class="glide__bullet w-3 h-3 rounded-full bg-gray-300" data-glide-dir="=0"></button>
+                    <button class="glide__bullet w-3 h-3 rounded-full bg-gray-300" data-glide-dir="=1"></button>
+                    <button class="glide__bullet w-3 h-3 rounded-full bg-gray-300" data-glide-dir="=2"></button>
+                    <button class="glide__bullet w-3 h-3 rounded-full bg-gray-300" data-glide-dir="=3"></button>
+                    <button class="glide__bullet w-3 h-3 rounded-full bg-gray-300" data-glide-dir="=4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Artwork -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About My Creative Process</h2>
+                    <p class="text-gray-600 mb-6">
+                        Each artwork represents a unique exploration of different mediums, techniques, and concepts. 
+                        From digital illustrations to traditional sketches, my work reflects a continuous journey of 
+                        experimentation and growth.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        I draw inspiration from everyday experiences, nature, technology, and human interactions, 
+                        blending these elements into visually compelling pieces that tell stories and evoke emotions.
+                    </p>
+                    <a href="all-my-projects.html" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition inline-flex items-center">
+                        View Full Portfolio <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-xl overflow-hidden shadow-md h-64">
+                            <img src="Images\Artwork\sketch1726117574512.png" alt="Studio Work" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-md h-64 mt-8">
+                            <img src="Images\Artwork\sketch1688885921029.png" alt="Workspace" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-md h-64">
+                            <img src="Images\Artwork\sketch1698653023653.png" alt="Digital Tools" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-md h-64 mt-8">
+                            <img src="Images\Artwork\sketch1754411238144.jpeg" alt="Learning" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dezign Hub</h3>
+                    <p class="text-gray-400">Showcasing impactful design solutions for complex problems.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Work</h4>
+                    <ul class="space-y-2">
+                        <li><a href="case-study-1.html" class="text-gray-400 hover:text-white transition">Fintech App</a></li>
+                        <li><a href="case-study-2.html" class="text-gray-400 hover:text-white transition">Healthcare</a></li>
+                        <li><a href="case-study-3.html" class="text-gray-400 hover:text-white transition">E-learning</a></li>
+                        <li><a href="case-study-4.html" class="text-gray-400 hover:text-white transition">E-commerce</a></li>
+                        <li><a href="case-study-5.html" class="text-gray-400 hover:text-white transition">Travel</a></li>
+                        <li><a href="case-study-6.html" class="text-gray-400 hover:text-white transition">Synergy flow</a></li>
+                        <li><a href="case-study-7.html" class="text-gray-400 hover:text-white transition">Resto flow</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Experience</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Approach</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="mail"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 UX Portfolio. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Initialize feather icons
+        feather.replace();
+
+        // Initialize Glide carousel
+        new Glide('.glide', {
+            type: 'carousel',
+            perView: 3,
+            gap: 24,
+            breakpoints: {
+                1024: {
+                    perView: 2
+                },
+                768: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    </script>
+</body>
+</html>

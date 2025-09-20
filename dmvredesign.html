@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dez Sima | DMV Website Redesign Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #10b981 100%);
+        }
+        .section-divider {
+            height: 100px;
+            background: linear-gradient(to bottom right, transparent 49.5%, white 50%);
+        }
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+   <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="C:\Users\despi\OneDrive\Documents\Portfolio\Home-page.html" class="text-xl font-bold text-indigo-600">Dez Sima</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                   <a href="all-my-projects.html" class="text-gray-700 hover:text-indigo-600 transition">Work</a>
+                    <a href="resume.html#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                  <a href="resume.html#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">DMV Website Redesign</h1>
+                    <p class="text-xl mb-8 opacity-90">Transforming a frustrating government service into a seamless digital experience</p>
+                    <div class="flex space-x-4">
+                        <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full">UX Research</span>
+                        <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full">UI Design</span>
+                        <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full">Service Design</span>
+                        <a href="drive-easy-prototype\drive-easy-prototype.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium inline-flex items-center hover:bg-gray-100 transition">
+                        <i data-feather="play" class="mr-2"></i> View Prototype
+                    </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="http://static.photos/technology/1200x630/42" alt="DMV Website Redesign" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Project Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Project Overview</h2>
+                <p class="max-w-3xl mx-auto text-gray-600">The Department of Motor Vehicles (DMV) website is notoriously difficult to use. This case study documents my process of redesigning the experience to be more intuitive, accessible, and efficient for users.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="target" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Challenge</h3>
+                    <p class="text-gray-600">The current DMV website has high bounce rates and low task completion rates due to confusing navigation and outdated design.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="users" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Role</h3>
+                    <p class="text-gray-600">Lead UX Designer responsible for research, information architecture, wireframing, prototyping, and usability testing.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="clock" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Duration</h3>
+                    <p class="text-gray-600">6-month project from initial research to high-fidelity prototype and usability testing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center mb-16">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6">Understanding the Problem</h2>
+                    <p class="text-gray-600 mb-6">Through user interviews and analytics review, I identified key pain points in the current DMV website experience:</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="alert-circle" class="text-red-500 mr-2 mt-1"></i>
+                            <span>Overwhelming information architecture with 200+ menu items</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="alert-circle" class="text-red-500 mr-2 mt-1"></i>
+                            <span>Inconsistent terminology that confused users</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="alert-circle" class="text-red-500 mr-2 mt-1"></i>
+                            <span>Critical forms buried deep in navigation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="alert-circle" class="text-red-500 mr-2 mt-1"></i>
+                            <span>No mobile optimization for 40% of users</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 md:pl-10" data-aos="fade-left">
+                    <img src="http://static.photos/office/1024x576/23" alt="User Research" class="rounded-lg shadow-lg">
+                    <p class="text-sm text-gray-500 mt-2">User interviews revealed frustration with the current DMV website experience</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-sm mt-16" data-aos="fade-up">
+                <h3 class="text-xl font-bold mb-6">Key User Personas</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="user" class="text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">New Driver</h4>
+                                <p class="text-sm text-gray-500">Age 16-25</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm">"I just need to know what documents to bring for my license test without reading through pages of legal jargon."</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="user" class="text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Senior Citizen</h4>
+                                <p class="text-sm text-gray-500">Age 65+</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm">"The website is too small and complicated. I just want to renew my license without getting frustrated."</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="user" class="text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Business Owner</h4>
+                                <p class="text-sm text-gray-500">Age 30-60</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm">"I need to register multiple company vehicles quickly. The current system makes this process take twice as long as it should."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Design Process</h2>
+                <p class="max-w-3xl mx-auto text-gray-600">I followed a user-centered design approach to create a solution that addresses the identified pain points.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 mb-16">
+                <div class="process-card bg-gray-50 p-6 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <span class="text-indigo-600 font-bold">1</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-center">Research</h3>
+                    <p class="text-gray-600 text-sm text-center">User interviews, analytics review, competitive analysis</p>
+                </div>
+                <div class="process-card bg-gray-50 p-6 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <span class="text-indigo-600 font-bold">2</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-center">Define</h3>
+                    <p class="text-gray-600 text-sm text-center">Personas, journey maps, problem statements</p>
+                </div>
+                <div class="process-card bg-gray-50 p-6 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <span class="text-indigo-600 font-bold">3</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-center">Ideate</h3>
+                    <p class="text-gray-600 text-sm text-center">Wireframes, prototypes, usability testing</p>
+                </div>
+                <div class="process-card bg-gray-50 p-6 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <span class="text-indigo-600 font-bold">4</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-center">Implement</h3>
+                    <p class="text-gray-600 text-sm text-center">High-fidelity designs, developer handoff</p>
+                </div>
+            </div>
+
+            <div class="bg-indigo-50 p-8 rounded-xl" data-aos="fade-up">
+                <h3 class="text-xl font-bold mb-6">Information Architecture Redesign</h3>
+                <div class="md:flex items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <p class="text-gray-700 mb-4">The existing information architecture was overwhelming with over 200 menu items. I conducted card sorting exercises with users to create a more intuitive structure:</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                                <span>Reduced top-level categories from 15 to 5</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                                <span>Created task-based navigation instead of department-based</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                                <span>Implemented progressive disclosure for complex processes</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 md:pl-10">
+                        <img src="http://static.photos/minimal/1024x576/7" alt="Information Architecture" class="rounded-lg shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">The Solution</h2>
+                <p class="max-w-3xl mx-auto text-gray-600">A completely redesigned DMV experience focused on user needs and common tasks.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 mb-16">
+                <div data-aos="fade-right">
+                    <div class="bg-white p-6 rounded-xl shadow-sm mb-6">
+                        <h3 class="text-xl font-bold mb-4">Task-Based Navigation</h3>
+                        <p class="text-gray-600 mb-4">Instead of organizing content by DMV departments, the new design focuses on what users actually want to accomplish.</p>
+                        <img src="http://static.photos/technology/1024x576/15" alt="Task-Based Navigation" class="rounded-lg">
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-white p-6 rounded-xl shadow-sm mb-6">
+                        <h3 class="text-xl font-bold mb-4">Personalized Checklists</h3>
+                        <p class="text-gray-600 mb-4">Dynamic checklists help users understand exactly what they need to bring based on their specific situation.</p>
+                        <img src="http://static.photos/technology/1024x576/16" alt="Personalized Checklists" class="rounded-lg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up">
+                <h3 class="text-xl font-bold mb-6">Mobile-First Design</h3>
+                <div class="md:flex items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <p class="text-gray-700 mb-4">With 40% of users accessing the site on mobile devices, the redesign prioritizes mobile experience with:</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="smartphone" class="text-indigo-500 mr-2 mt-1"></i>
+                                <span>Responsive design that works on all screen sizes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-indigo-500 mr-2 mt-1"></i>
+                                <span>Larger touch targets for key actions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="download" class="text-indigo-500 mr-2 mt-1"></i>
+                                <span>Offline capability for critical forms</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 md:pl-10 flex justify-center">
+                        <img src="http://static.photos/technology/640x360/18" alt="Mobile Design" class="h-96 object-contain">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Results & Impact</h2>
+                <p class="max-w-3xl mx-auto opacity-90">The redesigned DMV website significantly improved user experience and operational efficiency.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold mb-2">87%</div>
+                    <p class="opacity-90">Increase in task completion rate during usability testing</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold mb-2">62%</div>
+                    <p class="opacity-90">Reduction in call center inquiries for basic information</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-bold mb-2">4.8/5</div>
+                    <p class="opacity-90">Average user satisfaction score post-implementation</p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center" data-aos="fade-up">
+                <h3 class="text-xl font-bold mb-6">Testimonial</h3>
+                <div class="max-w-3xl mx-auto bg-white bg-opacity-10 p-8 rounded-xl">
+                    <p class="text-lg italic mb-6">"The new DMV website has transformed what was once a frustrating experience into something I can actually complete without help. The checklists saved me two trips to the office!"</p>
+                    <div class="flex items-center justify-center">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full mr-4"></div>
+                        <div>
+                            <div class="font-bold">Sarah J.</div>
+                            <div class="text-sm opacity-80">DMV Website User</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <!-- Reflection -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6">Reflection & Learnings</h2>
+                    <p class="text-gray-600 mb-6">This project reinforced several important UX principles when working with government services:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <i data-feather="lightbulb" class="text-indigo-600"></i>
+                            </div>
+                            <span class="text-gray-700">Complex bureaucratic systems can be made accessible through thoughtful information architecture</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <i data-feather="lightbulb" class="text-indigo-600"></i>
+                            </div>
+                            <span class="text-gray-700">Government websites serve diverse audiences requiring multiple pathways to the same information</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <i data-feather="lightbulb" class="text-indigo-600"></i>
+                            </div>
+                            <span class="text-gray-700">Stakeholder management is as crucial as user research when redesigning public services</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 md:pl-10" data-aos="fade-left">
+                    <div class="bg-gray-50 p-8 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4">Next Steps</h3>
+                        <p class="text-gray-600 mb-6">While the redesign has been successful, there are opportunities for further improvement:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i data-feather="chevron-right" class="text-indigo-500 mr-2 mt-1"></i>
+                                <span>Integration with other state services for a unified government experience</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="chevron-right" class="text-indigo-500 mr-2 mt-1"></i>
+                                <span>Expanded multilingual support for non-English speakers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="chevron-right" class="text-indigo-500 mr-2 mt-1"></i>
+                                <span>Implementation of AI chatbot for common questions</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dezign Hub</h3>
+                    <p class="text-gray-400">Showcasing impactful design solutions for complex problems.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Work</h4>
+                    <ul class="space-y-2">
+                        <li><a href="case-study-2.html" class="text-gray-400 hover:text-white transition">Healthcare</a></li>
+                        <li><a href="case-study-3.html" class="text-gray-400 hover:text-white transition">E-learning</a></li>
+                        <li><a href="case-study-4.html" class="text-gray-400 hover:text-white transition">E-commerce</a></li>
+                        <li><a href="case-study-5.html" class="text-gray-400 hover:text-white transition">Travel</a></li>
+                        <li><a href="case-study-6.html" class="text-gray-400 hover:text-white transition">Synergy flow</a></li>
+                        <li><a href="case-study-7.html" class="text-gray-400 hover:text-white transition">Resto flow</a></li>
+                        <li><a href="Artfolio.html" class="text-gray-400 hover:text-white transition">Artwork</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Experience</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Approach</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="mail"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 UX Portfolio. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Art Portfolio | UX Designer</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .artwork-card:hover .artwork-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .artwork-overlay {
+            transition: all 0.3s ease;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold gradient-text">ARTFOLIO</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                     <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#work" class="text-gray-700 hover:text-indigo-600 transition">Work</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                </div>
+                    <a href="index.html#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        Digital Art <span class="gradient-text">Showcase</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
+                        Exploring the intersection of UX design and digital art through creative experimentation and thoughtful execution.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#gallery" class="px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition transform hover:-translate-y-1">
+                            View Gallery
+                        </a>
+                        <a href="#" class="px-6 py-3 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-50 transition transform hover:-translate-y-1">
+                            Learn Process
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-2/5" data-aos="fade-left">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                        <img src="Images\Artwork\sketch1712358427532 (1).png" alt="Featured Artwork" class="w-full h-auto">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-semibold">"Digital Dreams"</h3>
+                                <p class="text-gray-200">2023 • Digital Illustration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">My <span class="gradient-text">Artwork</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A curated selection of my digital creations, each telling a unique visual story.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Artwork 1 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up">
+                    <img src="Images\Artwork\sketch1723220531271.png" alt="Abstract Composition" class="w-full h-64 object-cover">
+                    <div class="artwork-overlay absolute inset-0 bg-black/70 flex flex-col justify-end opacity-0 transform translate-y-4 p-6">
+                        <h3 class="text-white text-xl font-semibold mb-2">"Neon Waves"</h3>
+                        <p class="text-gray-300 mb-4">Digital painting exploring vibrant color combinations</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-indigo-600/90 text-white text-xs rounded-full">Digital</span>
+                            <span class="px-3 py-1 bg-pink-600/90 text-white text-xs rounded-full">Abstract</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 2 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <img src="Images\Artwork\sketch1713155764420.png" alt="Minimal Design" class="w-full h-64 object-cover">
+                    <div class="artwork-overlay absolute inset-0 bg-black/70 flex flex-col justify-end opacity-0 transform translate-y-4 p-6">
+                        <h3 class="text-white text-xl font-semibold mb-2">"Silhouettes"</h3>
+                        <p class="text-gray-300 mb-4">Minimalist character design study</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-indigo-600/90 text-white text-xs rounded-full">Character</span>
+                            <span class="px-3 py-1 bg-green-600/90 text-white text-xs rounded-full">Minimal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 3 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <img src="Images\Artwork\sketch1710947528868.png" alt="Tech Art" class="w-full h-64 object-cover">
+                    <div class="artwork-overlay absolute inset-0 bg-black/70 flex flex-col justify-end opacity-0 transform translate-y-4 p-6">
+                        <h3 class="text-white text-xl font-semibold mb-2">"Future UI"</h3>
+                        <p class="text-gray-300 mb-4">Concept art for futuristic interfaces</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-indigo-600/90 text-white text-xs rounded-full">UI/UX</span>
+                            <span class="px-3 py-1 bg-purple-600/90 text-white text-xs rounded-full">Concept</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 4 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up">
+                    <img src="Images\Artwork\sketch1727242286597 (1).png" alt="Nature Inspired" class="w-full h-64 object-cover">
+                    <div class="artwork-overlay absolute inset-0 bg-black/70 flex flex-col justify-end opacity-0 transform translate-y-4 p-6">
+                        <h3 class="text-white text-xl font-semibold mb-2">"Organic Forms"</h3>
+                        <p class="text-gray-300 mb-4">Nature-inspired digital illustration</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-indigo-600/90 text-white text-xs rounded-full">Illustration</span>
+                            <span class="px-3 py-1 bg-teal-600/90 text-white text-xs rounded-full">Nature</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 5 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <img src="Images\Artwork\sketch1688432431536.png" alt="Portrait" class="w-full h-64 object-cover">
+                    <div class="artwork-overlay absolute inset-0 bg-black/70 flex flex-col justify-end opacity-0 transform translate-y-4 p-6">
+                        <h3 class="text-white text-xl font-semibold mb-2">"Faces"</h3>
+                        <p class="text-gray-300 mb-4">Digital portrait series</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-indigo-600/90 text-white text-xs rounded-full">Portrait</span>
+                            <span class="px-3 py-1 bg-red-600/90 text-white text-xs rounded-full">Character</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 6 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <img src="Images\Artwork\sketch1677277423460.png" alt="Color Study" class="w-full h-64 object-cover">
+                    <div class="artwork-overlay absolute inset-0 bg-black/70 flex flex-col justify-end opacity-0 transform translate-y-4 p-6">
+                        <h3 class="text-white text-xl font-semibold mb-2">"Color Theory"</h3>
+                        <p class="text-gray-300 mb-4">Experimental color combinations</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-indigo-600/90 text-white text-xs rounded-full">Study</span>
+                            <span class="px-3 py-1 bg-yellow-600/90 text-white text-xs rounded-full">Color</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16" data-aos="fade-up">
+                <a href="gallery-artwork.html" class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-50 transition">
+                    View All Artwork
+                    <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">My <span class="gradient-text">Creative Process</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">How I approach each digital art project from concept to completion.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="search" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Research & Inspiration</h3>
+                    <p class="text-gray-600">I gather references, study color palettes, and explore different artistic styles to inform my creative direction.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="edit" class="text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Sketching & Concepting</h3>
+                    <p class="text-gray-600">Quick digital sketches help me explore composition and layout before committing to a final direction.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="layers" class="text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Execution & Refinement</h3>
+                    <p class="text-gray-600">Using digital tools, I bring the concept to life while continuously refining details and adjusting the composition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-indigo-600 text-white">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Create Something <span class="gradient-text">Amazing</span> Together</h2>
+            <p class="text-indigo-100 mb-8 max-w-2xl mx-auto">Interested in my digital art or UX design services? I'd love to hear about your project and how we can collaborate.</p>
+            <a href="index.html#contact" class="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-full hover:bg-gray-100 transition transform hover:-translate-y-1">
+                Get in Touch
+                <i data-feather="send" class="ml-2 w-4 h-4"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dezign Hub</h3>
+                    <p class="text-gray-400">Showcasing impactful design solutions for complex problems.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Work</h4>
+                    <ul class="space-y-2">
+                        <li><a href="case-study-1.html" class="text-gray-400 hover:text-white transition">Fintech App</a></li>
+                        <li><a href="case-study-2.html" class="text-gray-400 hover:text-white transition">Healthcare</a></li>
+                        <li><a href="case-study-3.html" class="text-gray-400 hover:text-white transition">E-learning</a></li>
+                        <li><a href="case-study-4.html" class="text-gray-400 hover:text-white transition">E-commerce</a></li>
+                        <li><a href="case-study-5.html" class="text-gray-400 hover:text-white transition">Travel</a></li>
+                        <li><a href="case-study-6.html" class="text-gray-400 hover:text-white transition">Synergy flow</a></li>
+                        <li><a href="case-study-7.html" class="text-gray-400 hover:text-white transition">Resto flow</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Experience</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Approach</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="mail"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 UX Portfolio. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        feather.replace();
+        
+        // Mobile menu toggle functionality would go here
+        document.addEventListener('DOMContentLoaded', function() {
+            // You would add JavaScript for mobile menu toggle here
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Case Study | UX Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .section-divider {
+            height: 100px;
+            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(249,250,251,1) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="C:\Users\despi\OneDrive\Documents\Portfolio\Home-page.html" class="text-xl font-bold text-indigo-600">Dez Sima</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="all-my-projects.html" class="text-gray-700 hover:text-indigo-600 transition">Work</a>
+                    <a href="resume.html#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                  <a href="resume.html#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div id="hero" class="hero-gradient text-white min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 z-0" id="vanta-bg"></div>
+        <div class="container mx-auto px-6 md:px-12 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Transforming E-Learning Engagement</h1>
+                    <p class="text-xl md:text-2xl mb-8">A case study on creating immersive and interactive online education experiences</p>
+                    <a href="e-learning-platform-prototype\index.html" class="bg-white text-indigo-700 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold inline-block transition duration-300">View prototype</a>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="http://static.photos/education/1024x576/10" alt="E-learning platform" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study Section -->
+    <section id="case-study" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">The Challenge</h2>
+                <p class="max-w-3xl mx-auto text-xl text-gray-600" data-aos="fade-up" data-aos-delay="100">
+                    How might we redesign an e-learning platform to increase student engagement and improve learning outcomes?
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10 mb-20">
+                <div class="bg-white p-8 rounded-xl shadow-md feature-card transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="users" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Low Engagement</h3>
+                    <p class="text-gray-600">Only 35% of students completed courses with traditional video lectures.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md feature-card transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="activity" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Poor Retention</h3>
+                    <p class="text-gray-600">Students retained only 20% of information from passive learning formats.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md feature-card transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="clock" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">High Dropout</h3>
+                    <p class="text-gray-600">60% of enrolled students abandoned courses within the first two weeks.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden max-w-5xl mx-auto mb-20" data-aos="fade-up">
+                <img src="http://static.photos/technology/1200x630/15" alt="User research" class="w-full">
+                <div class="p-10">
+                    <h3 class="text-2xl font-bold mb-4">Research & Discovery</h3>
+                    <p class="text-gray-600 mb-6">We conducted in-depth interviews with 50 students and analyzed behavioral data from 10,000 course sessions to identify pain points and opportunities.</p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold mb-2 text-indigo-600">Key Insights:</h4>
+                            <ul class="list-disc pl-5 text-gray-600">
+                                <li class="mb-2">Students needed more frequent interaction points</li>
+                                <li class="mb-2">Micro-learning sessions performed better than long lectures</li>
+                                <li class="mb-2">Gamification elements increased motivation</li>
+                                <li>Peer interaction boosted completion rates</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2 text-indigo-600">Methods:</h4>
+                            <ul class="list-disc pl-5 text-gray-600">
+                                <li class="mb-2">User interviews & surveys</li>
+                                <li class="mb-2">Heatmap analysis</li>
+                                <li class="mb-2">Journey mapping</li>
+                                <li>A/B testing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto mb-20" data-aos="fade-up">
+                <h3 class="text-2xl font-bold mb-6">Design Solution</h3>
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4 text-indigo-600">Interactive Learning Modules</h4>
+                        <p class="text-gray-600 mb-6">We redesigned the course structure into bite-sized modules with embedded quizzes, interactive simulations, and real-world application exercises.</p>
+                        <h4 class="text-xl font-semibold mb-4 text-indigo-600">Gamified Progress</h4>
+                        <p class="text-gray-600">Implemented a points system, achievement badges, and leaderboards to motivate students through friendly competition.</p>
+                    </div>
+                    <div>
+                        <img src="http://static.photos/technology/640x360/20" alt="Design solution" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-indigo-50 rounded-xl p-10 max-w-5xl mx-auto mb-20" data-aos="fade-up">
+                <h3 class="text-2xl font-bold mb-6">Results & Impact</h3>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-5xl font-bold text-indigo-600 mb-2">87%</div>
+                        <p class="text-gray-600">Course completion rate</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-bold text-indigo-600 mb-2">4.8/5</div>
+                        <p class="text-gray-600">Average satisfaction score</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-bold text-indigo-600 mb-2">3.5x</div>
+                        <p class="text-gray-600">Increase in engagement time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto" data-aos="fade-up">
+                <h3 class="text-2xl font-bold mb-6">Key Interface Elements</h3>
+                <div class="grid md:grid-cols-2 gap-6 mb-10">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h4 class="font-semibold mb-3 text-indigo-600">1. Interactive Video Player</h4>
+                        <p class="text-gray-600">Embedded quizzes and note-taking directly in the video timeline with automated concept reinforcement.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h4 class="font-semibold mb-3 text-indigo-600">2. Learning Dashboard</h4>
+                        <p class="text-gray-600">Personalized progress tracking with adaptive recommendations based on performance.</p>
+                    </div>
+                </div>
+                <img src="http://static.photos/workspace/1200x630/30" alt="Interface showcase" class="rounded-xl shadow-xl w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="py-20 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Conclusion</h2>
+            <p class="max-w-3xl mx-auto text-xl mb-10" data-aos="fade-up" data-aos-delay="100">
+                By focusing on interactive learning principles and leveraging gamification, we transformed passive content consumption into an engaging educational experience with measurable improvements in completion rates and learning outcomes.
+            </p>
+            <a href="#hero" class="bg-white text-indigo-700 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold inline-block transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                Back to Top
+            </a>
+        </div>
+    </section>
+    <!-- Next Project -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-8">View Another Project</h2>
+                <a href="case-study-4.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition">
+                    E Commerce Redesign
+                    <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dezign Hub</h3>
+                    <p class="text-gray-400">Showcasing impactful design solutions for complex problems.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Work</h4>
+                    <ul class="space-y-2">
+                        <li><a href="case-study-1.html" class="text-gray-400 hover:text-white transition">Fintech</a></li>
+                        <li><a href="case-study-2.html" class="text-gray-400 hover:text-white transition">Healthcare</a></li>
+                        <li><a href="case-study-4.html" class="text-gray-400 hover:text-white transition">E-commerce</a></li>
+                        <li><a href="case-study-5.html" class="text-gray-400 hover:text-white transition">Travel</a></li>
+                        <li><a href="case-study-6.html" class="text-gray-400 hover:text-white transition">Synergy flow</a></li>
+                        <li><a href="case-study-7.html" class="text-gray-400 hover:text-white transition">Resto flow</a></li>
+                        <li><a href="Artfolio.html" class="text-gray-400 hover:text-white transition">Artwork</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Experience</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Approach</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="mail"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 UX Portfolio. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x5b5bff,
+            backgroundColor: 0x0
+        });
+    </script>
+    <script>AOS.init();</script>
+    <script>feather.replace();</script>
+</body>
+</html>

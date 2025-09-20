@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Portfolio | Restaurant Management Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4f0ff 100%);
+        }
+        .section-divider {
+            height: 80px;
+            background: linear-gradient(to bottom, #ffffff, rgba(255,255,255,0));
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-smooth {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="C:\Users\despi\OneDrive\Documents\Portfolio\Home-page.html" class="text-xl font-bold text-indigo-600">Dez Sima</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="all-my-projects.html" class="text-gray-700 hover:text-indigo-600 transition">Work</a>
+                    <a href="resume.html#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                  <a href="resume.html#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menuBtn" class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900 mb-6">Designing a Restaurant Management Platform</h1>
+                    <p class="text-xl text-gray-600 mb-8">An end-to-end solution streamlining operations from reservations to inventory for restaurant owners</p>
+                    <div class="flex space-x-4">
+                        <a href="#case-study" class="px-6 py-3 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition-smooth">View Case Study</a>
+                        <a href="restoflow-prototype\index.html" class="px-6 py-3 rounded-md border border-indigo-600 text-indigo-600 hover:bg-indigo-50 transition-smooth">See Prototype</a>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="relative">
+                    <img src="http://static.photos/food/1200x630/42" alt="Restaurant management platform mockup" class="rounded-xl shadow-xl">
+                    <div class="absolute -bottom-6 -left-6 bg-indigo-100 w-24 h-24 rounded-full -z-10"></div>
+                    <div class="absolute -top-6 -right-6 bg-indigo-50 w-20 h-20 rounded-full -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Project Overview -->
+    <section id="case-study" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up">Project Overview</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6" data-aos="fade-up"></div>
+                <p class="max-w-3xl mx-auto text-xl text-gray-600" data-aos="fade-up">Restaurant owners juggle multiple systems daily - reservations, orders, staff scheduling, and inventory management. This platform consolidates all operations into one intuitive interface.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-smooth card-hover" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="target" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">The Challenge</h3>
+                    <p class="text-gray-600">Restaurant managers waste hours switching between disconnected systems, leading to operational inefficiencies and frustrated staff.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-smooth card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="compass" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">The Solution</h3>
+                    <p class="text-gray-600">A unified dashboard with real-time data synchronization across all restaurant operations, accessible on any device.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-smooth card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="clock" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">The Impact</h3>
+                    <p class="text-gray-600">Pilot restaurants reported 30% time savings on administrative tasks and 15% reduction in food waste through better inventory tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">User Research & Discovery</h2>
+                    <div class="w-20 h-1 bg-indigo-600 mb-6"></div>
+                    <p class="text-gray-600 mb-6">I conducted in-depth interviews with 12 restaurant owners and managers across different establishment sizes to understand pain points in their daily operations.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center">
+                                    <i data-feather="check" class="text-indigo-600 w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 text-gray-600">80% reported using 3+ different software systems daily</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center">
+                                    <i data-feather="check" class="text-indigo-600 w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 text-gray-600">65% struggled with inventory tracking leading to waste</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center">
+                                    <i data-feather="check" class="text-indigo-600 w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 text-gray-600">90% wanted mobile access to their management tools</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="http://static.photos/technology/1024x576/23" alt="User research process" class="rounded-xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Design Process</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 mb-16">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-indigo-600 font-bold">1</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Research</h3>
+                    <p class="text-sm text-gray-600">Interviews & Competitive Analysis</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-indigo-600 font-bold">2</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Define</h3>
+                    <p class="text-sm text-gray-600">User Flows & Information Architecture</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-indigo-600 font-bold">3</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Design</h3>
+                    <p class="text-sm text-gray-600">Wireframes & High-Fidelity Mockups</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-indigo-600 font-bold">4</span>
+                    </div>
+                    <h3 class="font-semibold mb-2">Test</h3>
+                    <p class="text-sm text-gray-600">Usability Testing & Iteration</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="http://static.photos/workspace/1024x576/15" alt="Wireframes and prototypes" class="rounded-xl shadow-lg">
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Wireframing & Prototyping</h3>
+                    <p class="text-gray-600 mb-6">After mapping core user journeys, I created low-fidelity wireframes to test workflow concepts with restaurant staff. The feedback informed several iterations before moving to high-fidelity designs.</p>
+                    <div class="mb-6">
+                        <h4 class="font-semibold mb-2">Key Insights:</h4>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>Need for customizable dashboard views based on staff roles</li>
+                            <li>Critical importance of offline functionality for reliability</li>
+                            <li>Integration with existing POS systems was non-negotiable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Design -->
+    <section id="prototype" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Final Design</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-xl text-gray-600">The platform was designed with modular components that restaurants could configure based on their specific needs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div data-aos="fade-up">
+                    <img src="Images\Dashboard restoflow.png" alt="Dashboard design" class="rounded-lg shadow-md w-full mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Unified Dashboard</h3>
+                    <p class="text-gray-600">Real-time overview of all restaurant operations with customizable widgets.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/technology/640x360/8" alt="Inventory management" class="rounded-lg shadow-md w-full mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Inventory Tracking</h3>
+                    <p class="text-gray-600">Automated alerts when stock runs low with supplier integration.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/technology/640x360/9" alt="Staff scheduling" class="rounded-lg shadow-md w-full mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Staff Management</h3>
+                    <p class="text-gray-600">Drag-and-drop scheduling with conflict detection.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition-smooth">
+                    View Interactive Prototype
+                    <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Key Takeaways</h2>
+            <p class="max-w-3xl mx-auto text-xl mb-8" data-aos="fade-up" data-aos-delay="100">This project reinforced the importance of understanding domain-specific workflows when designing for specialized industries like restaurant management.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-indigo-700 bg-opacity-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <i data-feather="users" class="w-8 h-8 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">Context Matters</h3>
+                    <p class="text-indigo-100">Designing for high-stress environments requires special attention to error prevention and recovery.</p>
+                </div>
+                <div class="bg-indigo-700 bg-opacity-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <i data-feather="layers" class="w-8 h-8 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">Modular Approach</h3>
+                    <p class="text-indigo-100">Building with configurable components allowed customization for different restaurant types.</p>
+                </div>
+                <div class="bg-indigo-700 bg-opacity-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="400">
+                    <i data-feather="smartphone" class="w-8 h-8 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">Mobile First</h3>
+                    <p class="text-indigo-100">Restaurant managers needed access on the go, requiring a responsive design that worked on any device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dezign Hub</h3>
+                    <p class="text-gray-400">Showcasing impactful design solutions for complex problems.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Work</h4>
+                    <ul class="space-y-2">
+                        <li><a href="case-study-1.html" class="text-gray-400 hover:text-white transition">Fintech</a></li>
+                        <li><a href="case-study-2.html" class="text-gray-400 hover:text-white transition">Healthcare</a></li>
+                        <li><a href="case-study-3.html" class="text-gray-400 hover:text-white transition">E-learning</a></li>
+                        <li><a href="case-study-4.html" class="text-gray-400 hover:text-white transition">E-commerce</a></li>
+                        <li><a href="case-study-5.html" class="text-gray-400 hover:text-white transition">Travel</a></li>
+                        <li><a href="case-study-6.html" class="text-gray-400 hover:text-white transition">Synergy flow</a></li>
+                        <li><a href="Artfolio.html" class="text-gray-400 hover:text-white transition">Artwork</a></li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Experience</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Approach</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="mail"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 UX Portfolio. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>

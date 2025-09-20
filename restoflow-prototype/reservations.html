@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestoFlow - Reservations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .sidebar {
+            transition: all 0.3s ease;
+        }
+        .sidebar.collapsed {
+            width: 80px;
+        }
+        .sidebar.collapsed .nav-text {
+            display: none;
+        }
+        .content {
+            transition: margin-left 0.3s ease;
+        }
+        .sidebar.collapsed + .content {
+            margin-left: 80px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="sidebar bg-indigo-800 text-white w-64 flex flex-col">
+            <div class="p-4 flex items-center justify-between border-b border-indigo-700">
+                <div class="flex items-center space-x-2">
+                    <i data-feather="coffee" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold">RestoFlow</span>
+                </div>
+                <button id="toggleSidebar" class="text-white focus:outline-none">
+                    <i data-feather="chevron-left" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex-1 p-4 space-y-2">
+                <a href="index.html" class="flex items-center space-x-2 p-2 rounded hover:bg-indigo-700">
+                    <i data-feather="home" class="w-5 h-5"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="reservations.html" class="flex items-center space-x-2 p-2 rounded hover:bg-indigo-700 bg-indigo-700">
+                    <i data-feather="calendar" class="w-5 h-5"></i>
+                    <span class="nav-text">Reservations</span>
+                </a>
+                <a href="inventory.html" class="flex items-center space-x-2 p-2 rounded hover:bg-indigo-700">
+                    <i data-feather="box" class="w-5 h-5"></i>
+                    <span class="nav-text">Inventory</span>
+                </a>
+                <a href="staff.html" class="flex items-center space-x-2 p-2 rounded hover:bg-indigo-700">
+                    <i data-feather="users" class="w-5 h-5"></i>
+                    <span class="nav-text">Staff Management</span>
+                </a>
+            </nav>
+            <div class="p-4 border-t border-indigo-700">
+                <div class="flex items-center space-x-2">
+                    <img src="http://static.photos/people/200x200/1" class="w-8 h-8 rounded-full" alt="User">
+                    <div class="nav-text">
+                        <p class="text-sm font-medium">Admin User</p>
+                        <p class="text-xs text-indigo-300">admin@restoflow.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content flex-1 overflow-auto">
+            <header class="bg-white shadow-sm p-4">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-2xl font-bold text-gray-800">Reservations</h1>
+                    <div class="flex items-center space-x-4">
+                        <button class="p-2 rounded-full hover:bg-gray-100">
+                            <i data-feather="bell" class="w-5 h-5 text-gray-600"></i>
+                        </button>
+                        <button class="p-2 rounded-full hover:bg-gray-100">
+                            <i data-feather="settings" class="w-5 h-5 text-gray-600"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <div class="relative w-full max-w-md">
+                        <i data-feather="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        <input type="text" placeholder="Search reservations..." class="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <button class="flex items-center space-x-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                        <i data-feather="plus" class="w-5 h-5"></i>
+                        <span>New Reservation</span>
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow overflow-hidden mb-6">
+                    <div class="p-4 border-b border-gray-200">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-semibold text-gray-800">Upcoming Reservations</h2>
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-1 text-sm border border-gray-300 rounded-lg hover:bg-gray-50">Today</button>
+                                <button class="px-3 py-1 text-sm border border-gray-300 rounded-lg hover:bg-gray-50">Week</button>
+                                <button class="px-3 py-1 text-sm border border-gray-300 rounded-lg hover:bg-gray-50">Month</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Customer</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date & Time</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Guests</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Table</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <img class="h-10 w-10 rounded-full" src="http://static.photos/people/200x200/4" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">John Smith</div>
+                                                <div class="text-sm text-gray-500">john@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Today, 7:30 PM</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">4</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">12</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">Confirmed</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        <div class="flex space-x-2">
+                                            <button class="text-indigo-600 hover:text-indigo-900">
+                                                <i data-feather="edit" class="w-4 h-4"></i>
+                                            </button>
+                                            <button class="text-red-600 hover:text-red-900">
+                                                <i data-feather="trash" class="w-4 h-4"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <img class="h-10 w-10 rounded-full" src="http://static.photos/people/200x200/5" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">Sarah Johnson</div>
+                                                <div class="text-sm text-gray-500">sarah@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Today, 8:15 PM</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">2</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">5</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">Confirmed</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        <div class="flex space-x-2">
+                                            <button class="text-indigo-600 hover:text-indigo-900">
+                                                <i data-feather="edit" class="w-4 h-4"></i>
+                                            </button>
+                                            <button class="text-red-600 hover:text-red-900">
+                                                <i data-feather="trash" class="w-4 h-4"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <img class="h-10 w-10 rounded-full" src="http://static.photos/people/200x200/6" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">Michael Brown</div>
+                                                <div class="text-sm text-gray-500">michael@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Tomorrow, 6:00 PM</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">6</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">8</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">Pending</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        <div class="flex space-x-2">
+                                            <button class="text-indigo-600 hover:text-indigo-900">
+                                                <i data-feather="edit" class="w-4 h-4"></i>
+                                            </button>
+                                            <button class="text-red-600 hover:text-red-900">
+                                                <i data-feather="trash" class="w-4 h-4"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <img class="h-10 w-10 rounded-full" src="http://static.photos/people/200x200/7" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">Emily Davis</div>
+                                                <div class="text-sm text-gray-500">emily@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Tomorrow, 7:30 PM</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">3</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">4</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">Confirmed</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        <div class="flex space-x-2">
+                                            <button class="text-indigo-600 hover:text-indigo-900">
+                                                <i data-feather="edit" class="w-4 h-4"></i>
+                                            </button>
+                                            <button class="text-red-600 hover:text-red-900">
+                                                <i data-feather="trash" class="w-4 h-4"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="px-6 py-4 border-t border-gray-200 flex items-center justify-between">
+                        <div class="text-sm text-gray-500">
+                            Showing <span class="font-medium">1</span> to <span class="font-medium">4</span> of <span class="font-medium">12</span> results
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="px-3 py-1 border border-gray-300 rounded-lg text-sm hover:bg-gray-50">Previous</button>
+                            <button class="px-3 py-1 border border-gray-300 rounded-lg text-sm bg-gray-100">1</button>
+                            <button class="px-3 py-1 border border-gray-300 rounded-lg text-sm hover:bg-gray-50">2</button>
+                            <button class="px-3 py-1 border border-gray-300 rounded-lg text-sm hover:bg-gray-50">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-4">Reservation Calendar</h2>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-md font-medium">November 2023</h3>
+                                <div class="flex space-x-2">
+                                    <button class="p-1 rounded hover:bg-gray-200">
+                                        <i data-feather="chevron-left" class="w-5 h-5"></i>
+                                    </button>
+                                    <button class="p-1 rounded hover:bg-gray-200">
+                                        <i data-feather="chevron-right" class="w-5 h-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-7 gap-1 text-center text-sm">
+                                <div class="py-2 font-medium text-gray-500">Sun</div>
+                                <div class="py-2 font-medium text-gray-500">Mon</div>
+                                <div class="py-2 font-medium text-gray-500">Tue</div>
+                                <div class="py-2 font-medium text-gray-500">Wed</div>
+                                <div class="py-2 font-medium text-gray-500">Thu</div>
+                                <div class="py-2 font-medium text-gray-500">Fri</div>
+                                <div class="py-2 font-medium text-gray-500">Sat</div>
+                                
+                                <div class="py-2 text-gray-400">29</div>
+                                <div class="py-2 text-gray-400">30</div>
+                                <div class="py-2 text-gray-400">31</div>
+                                <div class="py-2">1</div>
+                                <div class="py-2">2</div>
+                                <div class="py-2">3</div>
+                                <div class="py-2">4</div>
+                                
+                                <div class="py-2">5</div>
+                                <div class="py-2">6</div>
+                                <div class="py-2">7</div>
+                                <div class="py-2">8</div>
+                                <div class="py-2">9</div>
+                                <div class="py-2">10</div>
+                                <div class="py-2">11</div>
+                                
+                                <div class="py-2">12</div>
+                                <div class="py-2">13</div>
+                                <div class="py-2">14</div>
+                                <div class="py-2">15</div>
+                                <div class="py-2">16</div>
+                                <div class="py-2">17</div>
+                                <div class="py-2">18</div>
+                                
+                                <div class="py-2">19</div>
+                                <div class="py-2">20</div>
+                                <div class="py-2">21</div>
+                                <div class="py-2">22</div>
+                                <div class="py-2">23</div>
+                                <div class="py-2">24</div>
+                                <div class="py-2">25</div>
+                                
+                                <div class="py-2">26</div>
+                                <div class="py-2">27</div>
+                                <div class="py-2">28</div>
+                                <div class="py-2">29</div>
+                                <div class="py-2">30</div>
+                                <div class="py-2 text-gray-400">1</div>
+                                <div class="py-2 text-gray-400">2</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-4">Add New Reservation</h2>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Customer Name</label>
+                                <input type="text" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                                    <input type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Time</label>
+                                    <input type="time" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Number of Guests</label>
+                                    <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6+</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Table Number</label>
+                                    <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Special Requests</label>
+                                <textarea rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition">Create Reservation</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        document.getElementById('toggleSidebar').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.content').classList.toggle('ml-64');
+            document.querySelector('.content').classList.toggle('ml-20');
+            
+            const icon = this.querySelector('i');
+            if (document.querySelector('.sidebar').classList.contains('collapsed')) {
+                feather.replace();
+                icon.setAttribute('data-feather', 'chevron-right');
+            } else {
+                feather.replace();
+                icon.setAttribute('data-feather', 'chevron-left');
+            }
+            feather.replace();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestoFlow - Restaurant Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .sidebar {
+            transition: all 0.3s ease;
+        }
+        .sidebar.collapsed {
+            width: 80px;
+        }
+        .sidebar.collapsed .nav-text {
+            display: none;
+        }
+        .content {
+            transition: margin-left 0.3s ease;
+        }
+        .sidebar.collapsed + .content {
+            margin-left: 80px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="sidebar bg-indigo-800 text-white w-64 flex flex-col">
+            <div class="p-4 flex items-center justify-between border-b border-indigo-700">
+                <div class="flex items-center space-x-2">
+                    <i data-feather="coffee" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold">RestoFlow</span>
+                </div>
+                <button id="toggleSidebar" class="text-white focus:outline-none">
+                    <i data-feather="chevron-left" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex-1 p-4 space-y-2">
+                <a href="index.html" class="flex items-center space-x-2 p-2 rounded hover:bg-indigo-700">
+                    <i data-feather="home" class="w-5 h-5"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="reservations.html" class="flex items-center space-x-2 p-2 rounded hover:bg-indigo-700">
+                    <i data-feather="calendar" class="w-5 h-5"></i>
+                    <span class="nav-text">Reservations</span>
+                </a>
+                <a href="inventory.html" class="flex items-center space-x-2 p-2 rounded hover:bg-indigo-700">
+                    <i data-feather="box" class="w-5 h-5"></i>
+                    <span class="nav-text">Inventory</span>
+                </a>
+                <a href="staff.html" class="flex items-center space-x-2 p-2 rounded hover:bg-indigo-700 bg-indigo-700">
+                    <i data-feather="users" class="w-5 h-5"></i>
+                    <span class="nav-text">Staff Management</span>
+                </a>
+            </nav>
+            <div class="p-4 border-t border-indigo-700">
+                <div class="flex items-center space-x-2">
+                    <img src="http://static.photos/people/200x200/1" class="w-8 h-8 rounded-full" alt="User">
+                    <div class="nav-text">
+                        <p class="text-sm font-medium">Admin User</p>
+                        <p class="text-xs text-indigo-300">admin@restoflow.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content flex-1 overflow-auto">
+            <header class="bg-white shadow-sm p-4">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-2xl font-bold text-gray-800">Dashboard</h1>
+                    <div class="flex items-center space-x-4">
+                        <button class="p-2 rounded-full hover:bg-gray-100">
+                            <i data-feather="bell" class="w-5 h-5 text-gray-600"></i>
+                        </button>
+                        <button class="p-2 rounded-full hover:bg-gray-100">
+                            <i data-feather="settings" class="w-5 h-5 text-gray-600"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500">Today's Reservations</p>
+                                <h3 class="text-2xl font-bold">24</h3>
+                            </div>
+                            <div class="p-3 rounded-full bg-indigo-100 text-indigo-600">
+                                <i data-feather="calendar" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500">Available Staff</p>
+                                <h3 class="text-2xl font-bold">8/12</h3>
+                            </div>
+                            <div class="p-3 rounded-full bg-green-100 text-green-600">
+                                <i data-feather="users" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500">Low Stock Items</p>
+                                <h3 class="text-2xl font-bold">5</h3>
+                            </div>
+                            <div class="p-3 rounded-full bg-yellow-100 text-yellow-600">
+                                <i data-feather="alert-triangle" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500">Monthly Revenue</p>
+                                <h3 class="text-2xl font-bold">$24,500</h3>
+                            </div>
+                            <div class="p-3 rounded-full bg-blue-100 text-blue-600">
+                                <i data-feather="dollar-sign" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold text-gray-800">Recent Reservations</h2>
+                        <a href="reservations.html" class="text-indigo-600 hover:underline">View All</a>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Time</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Guests</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">John Smith</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Today</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">7:30 PM</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">4</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">Confirmed</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Sarah Johnson</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Today</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">8:15 PM</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">2</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">Confirmed</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Michael Brown</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Tomorrow</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">6:00 PM</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">6</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">Pending</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h2 class="text-xl font-bold text-gray-800">Staff Schedule</h2>
+                            <a href="staff.html" class="text-indigo-600 hover:underline">View All</a>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <img src="http://static.photos/people/200x200/2" class="w-10 h-10 rounded-full" alt="Staff">
+                                    <div>
+                                        <p class="font-medium">Emma Wilson</p>
+                                        <p class="text-sm text-gray-500">Waitress</p>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-600">9:00 AM - 5:00 PM</div>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <img src="http://static.photos/people/200x200/3" class="w-10 h-10 rounded-full" alt="Staff">
+                                    <div>
+                                        <p class="font-medium">David Lee</p>
+                                        <p class="text-sm text-gray-500">Chef</p>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-600">10:00 AM - 6:00 PM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h2 class="text-xl font-bold text-gray-800">Low Stock Items</h2>
+                            <a href="inventory.html" class="text-indigo-600 hover:underline">View All</a>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <div>
+                                    <p class="font-medium">Chicken Breast</p>
+                                    <p class="text-sm text-gray-500">Meat</p>
+                                </div>
+                                <div class="text-sm font-medium text-red-600">2 kg left</div>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <div>
+                                    <p class="font-medium">Red Wine</p>
+                                    <p class="text-sm text-gray-500">Beverage</p>
+                                </div>
+                                <div class="text-sm font-medium text-red-600">3 bottles left</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        document.getElementById('toggleSidebar').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.content').classList.toggle('ml-64');
+            document.querySelector('.content').classList.toggle('ml-20');
+            
+            const icon = this.querySelector('i');
+            if (document.querySelector('.sidebar').classList.contains('collapsed')) {
+                feather.replace();
+                icon.setAttribute('data-feather', 'chevron-right');
+            } else {
+                feather.replace();
+                icon.setAttribute('data-feather', 'chevron-left');
+            }
+            feather.replace();
+        });
+    </script>
+</body>
+</html>

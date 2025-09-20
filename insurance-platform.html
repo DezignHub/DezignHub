@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Platform UX Case Study | UX Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .prototype-container {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .prototype-iframe {
+            height: 600px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        }
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #CBD5E0;
+            transition: all 0.3s ease;
+        }
+        .nav-dot.active {
+            background: #4299E1;
+            transform: scale(1.3);
+        }
+        .process-step {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .process-step:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #E2E8F0;
+        }
+        .process-step:last-child:before {
+            height: 50%;
+        }
+        .process-step:after {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #4299E1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="C:\Users\despi\OneDrive\Documents\Portfolio\Home-page.html" class="text-xl font-bold text-indigo-600">Dez Sima</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#overview" class="text-gray-700 hover:text-blue-600 transition">Overview</a>
+                    <a href="#research" class="text-gray-700 hover:text-blue-600 transition">Research</a>
+                    <a href="#design" class="text-gray-700 hover:text-blue-600 transition">Design</a>
+                    <a href="#results" class="text-gray-700 hover:text-blue-600 transition">Results</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Insurance Platform UX Case Study</h1>
+                    <p class="text-xl mb-8">Redesigning the insurance experience with intuitive quoting, claims, and agent tools</p>
+                    <a href="insurance-platform-prototype.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium inline-flex items-center hover:bg-gray-100 transition">
+                        <i data-feather="play" class="mr-2"></i> View Prototype
+                    </a>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
+                    <img src="http://static.photos/finance/1024x576/1" alt="Insurance Platform Mockup" class="rounded-xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Project Overview</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up">
+                    <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="target" class="text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">The Challenge</h3>
+                    <p class="text-gray-600">Insurance platforms often overwhelm users with complex forms and unclear processes, leading to high abandonment rates during quoting and claims.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="compass" class="text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">The Goal</h3>
+                    <p class="text-gray-600">Create a seamless, intuitive experience that simplifies insurance processes while maintaining compliance and security requirements.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="users" class="text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">My Role</h3>
+                    <p class="text-gray-600">Lead UX Designer responsible for research, user flows, wireframing, prototyping, and usability testing across all platform components.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-blue-50 p-8 rounded-xl" data-aos="fade-up">
+                <h3 class="text-xl font-semibold mb-4">Platform Components</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-2 rounded-lg mr-4">
+                            <i data-feather="file-text" class="text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Quoting System</h4>
+                            <p class="text-gray-600 text-sm">Streamlined process with smart defaults and progressive disclosure</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-2 rounded-lg mr-4">
+                            <i data-feather="alert-circle" class="text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Claims Portal</h4>
+                            <p class="text-gray-600 text-sm">Guided claims submission with document capture and status tracking</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-2 rounded-lg mr-4">
+                            <i data-feather="briefcase" class="text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Agent Tools</h4>
+                            <p class="text-gray-600 text-sm">Dashboard with client management and performance analytics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">User Research</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-6">Research Methods</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center" data-aos="zoom-in">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i data-feather="user" class="text-blue-600"></i>
+                        </div>
+                        <h4 class="font-medium">User Interviews</h4>
+                        <p class="text-gray-600 text-sm mt-1">12 participants across customer segments</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i data-feather="trending-up" class="text-blue-600"></i>
+                        </div>
+                        <h4 class="font-medium">Analytics Review</h4>
+                        <p class="text-gray-600 text-sm mt-1">Existing platform drop-off points</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i data-feather="map" class="text-blue-600"></i>
+                        </div>
+                        <h4 class="font-medium">Journey Mapping</h4>
+                        <p class="text-gray-600 text-sm mt-1">Current vs ideal workflows</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i data-feather="award" class="text-blue-600"></i>
+                        </div>
+                        <h4 class="font-medium">Competitive Audit</h4>
+                        <p class="text-gray-600 text-sm mt-1">5 leading insurance platforms</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-xl font-semibold mb-4">Key Findings</h3>
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="bg-blue-100 p-2 rounded-lg mr-4 flex-shrink-0">
+                                <i data-feather="alert-triangle" class="text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Complex Forms</h4>
+                                <p class="text-gray-600">72% of users abandoned the quoting process due to form length and unclear questions</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="bg-blue-100 p-2 rounded-lg mr-4 flex-shrink-0">
+                                <i data-feather="clock" class="text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Status Anxiety</h4>
+                                <p class="text-gray-600">Claims filers wanted more frequent updates and clearer timelines</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="bg-blue-100 p-2 rounded-lg mr-4 flex-shrink-0">
+                                <i data-feather="smartphone" class="text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Mobile Gaps</h4>
+                                <p class="text-gray-600">Document upload was particularly difficult on mobile devices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="http://static.photos/office/1024x576/1" alt="User Research Session" class="rounded-xl shadow-lg">
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white p-8 rounded-xl shadow-sm" data-aos="fade-up">
+                <h3 class="text-xl font-semibold mb-6">User Personas</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/1" alt="Persona 1" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-medium">Sarah, 32</h4>
+                        <p class="text-blue-600 text-sm mb-2">First-time home buyer</p>
+                        <p class="text-gray-600 text-sm">"I just want to know exactly what coverage I need without all the insurance jargon."</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/2" alt="Persona 2" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-medium">Michael, 45</h4>
+                        <p class="text-blue-600 text-sm mb-2">Small business owner</p>
+                        <p class="text-gray-600 text-sm">"After my flood damage, I had no idea what stage my claim was in for weeks."</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/3" alt="Persona 3" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-medium">Lisa, 28</h4>
+                        <p class="text-blue-600 text-sm mb-2">Insurance agent</p>
+                        <p class="text-gray-600 text-sm">"I need quick access to client policies and claims to provide good service."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Section -->
+    <section id="design" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Design Process</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-6">Design Evolution</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div data-aos="fade-up">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                            <img src="Images\wireframe website.webp" alt="Wireframes" class="rounded">
+                        </div>
+                        <h4 class="font-medium">Wireframing</h4>
+                        <p class="text-gray-600 text-sm">Low-fidelity flows focusing on information architecture</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                            <img src="Images\Interactive prototype.png" alt="Prototypes" class="rounded">
+                        </div>
+                        <h4 class="font-medium">Interactive Prototypes</h4>
+                        <p class="text-gray-600 text-sm">Clickable prototypes for usability testing</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                            <img src="Images\UI design.png" alt="UI Design" class="rounded">
+                        </div>
+                        <h4 class="font-medium">UI Design</h4>
+                        <p class="text-gray-600 text-sm">High-fidelity designs with design system</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-6">Key Design Decisions</h3>
+                <div class="space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div data-aos="fade-right">
+                            <img src="Images\key decisions design.jpg" alt="Progressive Disclosure" class="rounded-xl shadow">
+                        </div>
+                        <div data-aos="fade-left">
+                            <h4 class="font-medium text-lg mb-2">Progressive Disclosure</h4>
+                            <p class="text-gray-600">Complex forms were broken into simple steps with contextual help. Only relevant questions were shown based on previous answers.</p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div data-aos="fade-right">
+                            <h4 class="font-medium text-lg mb-2">Document Capture</h4>
+                            <p class="text-gray-600">Mobile-optimized document upload with automatic cropping and quality checking to reduce claim submission errors.</p>
+                        </div>
+                        <div data-aos="fade-left">
+                            <img src="Images\Document capture.png" alt="Document Capture" class="rounded-xl shadow">
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div data-aos="fade-right">
+                            <img src="Images\agent dashboard.png" alt="Agent Dashboard" class="rounded-xl shadow">
+                        </div>
+                        <div data-aos="fade-left">
+                            <h4 class="font-medium text-lg mb-2">Agent Dashboard</h4>
+                            <p class="text-gray-600">Customizable dashboard with quick access to common tasks, client alerts, and performance metrics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-blue-50 p-8 rounded-xl" data-aos="fade-up">
+                <h3 class="text-xl font-semibold mb-6">Design System Components</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="font-medium mb-3">Color System</h4>
+                        <div class="flex space-x-2 mb-2">
+                            <div class="w-8 h-8 rounded bg-blue-600"></div>
+                            <div class="w-8 h-8 rounded bg-blue-500"></div>
+                            <div class="w-8 h-8 rounded bg-blue-400"></div>
+                            <div class="w-8 h-8 rounded bg-blue-300"></div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <div class="w-8 h-8 rounded bg-gray-800"></div>
+                            <div class="w-8 h-8 rounded bg-gray-600"></div>
+                            <div class="w-8 h-8 rounded bg-gray-400"></div>
+                            <div class="w-8 h-8 rounded bg-gray-200"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-3">Typography</h4>
+                        <p class="text-lg font-semibold">Heading 1</p>
+                        <p class="text-base font-medium">Heading 2</p>
+                        <p class="text-sm">Body Text</p>
+                        <p class="text-xs">Caption</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-3">UI Components</h4>
+                        <div class="space-y-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded text-sm">Primary Button</button>
+                            <button class="border border-gray-300 px-4 py-2 rounded text-sm">Secondary</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Results Section -->
+    <section id="results" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Results & Impact</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-gray-50 p-6 rounded-xl text-center" data-aos="fade-up">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">42%</div>
+                    <p class="text-gray-600">Reduction in quote form abandonment</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">3.8★ → 4.6★</div>
+                    <p class="text-gray-600">Improvement in user satisfaction ratings</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">35%</div>
+                    <p class="text-gray-600">Increase in agent productivity metrics</p>
+                </div>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-6">User Feedback</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-blue-50 p-6 rounded-xl" data-aos="fade-right">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i data-feather="thumbs-up" class="text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Positive Feedback</h4>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">"The new quoting process was so much easier than other insurance sites I've used. It actually explained what each coverage option meant in simple terms."</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-left">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center mr-3">
+                                <i data-feather="alert-circle" class="text-gray-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Areas for Improvement</h4>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">"I'd like to see even more detail about why certain documents are needed for my claim. The more transparent, the better."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up">
+                <h3 class="text-xl font-semibold mb-6">Next Steps</h3>
+                <div class="process-step mb-8">
+                    <h4 class="font-medium mb-2">Ongoing Iteration</h4>
+                    <p class="text-gray-600">Continue refining based on user analytics and feedback, with quarterly usability testing sessions.</p>
+                </div>
+                <div class="process-step mb-8">
+                    <h4 class="font-medium mb-2">Claims Chatbot</h4>
+                    <p class="text-gray-600">Developing an AI assistant to guide users through the claims process and answer common questions.</p>
+                </div>
+                <div class="process-step">
+                    <h4 class="font-medium mb-2">Mobile App</h4>
+                    <p class="text-gray-600">Expanding the experience to native mobile with additional features like push notifications for claim updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dezign Hub</h3>
+                    <p class="text-gray-400">Showcasing impactful design solutions for complex problems.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Work</h4>
+                    <ul class="space-y-2">
+                        <li><a href="case-study-1.html" class="text-gray-400 hover:text-white transition">Fintech</a></li>
+                        <li><a href="case-study-2.html" class="text-gray-400 hover:text-white transition">Healthcare</a></li>
+                        <li><a href="case-study-3.html" class="text-gray-400 hover:text-white transition">E-learning</a></li>
+                        <li><a href="case-study-4.html" class="text-gray-400 hover:text-white transition">E-commerce</a></li>
+                        <li><a href="case-study-5.html" class="text-gray-400 hover:text-white transition">Travel</a></li>
+                        <li><a href="case-study-6.html" class="text-gray-400 hover:text-white transition">Synergy flow</a></li>
+                        <li><a href="Artfolio.html" class="text-gray-400 hover:text-white transition">Artwork</a></li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Experience</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Approach</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="mail"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 UX Portfolio. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Initialize feather icons
+        feather.replace();
+        
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.querySelector('.md\\:flex.space-x-8');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+        
+        // Prototype tab switching
+        const prototypeTabs = document.querySelectorAll('.prototype-tab');
+        const navDots = document.querySelectorAll('.nav-dot');
+        
+        prototypeTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabName = this.getAttribute('data-tab');
+                
+                // Update active tab button
+                prototypeTabs.forEach(t => t.classList.remove('bg-blue-600'));
+                prototypeTabs.forEach(t => t.classList.add('bg-gray-700'));
+                this.classList.remove('bg-gray-700');
+                this.classList.add('bg-blue-600');
+                
+                // Update active nav dot
+                navDots.forEach(dot => dot.classList.remove('active'));
+                document.querySelector(`.nav-dot[data-tab="${tabName}"]`).classList.add('active');
+                
+                // Show loading state
+                const loading = document.getElementById('prototype-loading');
+                loading.classList.remove('hidden');
+                
+                // Hide all iframes
+                document.querySelectorAll('.prototype-iframe-wrapper').forEach(wrapper => {
+                    wrapper.classList.add('hidden');
+                });
+                
+                // Simulate loading delay
+                setTimeout(() => {
+                    // Show selected iframe
+                    document.getElementById(`${tabName}-prototype`).classList.remove('hidden');
+                    
+                    // Load appropriate prototype content
+                    const iframe = document.getElementById(`${tabName}-iframe`);
+                    
+                    // In a real scenario, you would load actual prototype URLs here
+                    // For this demo, we'll just show a placeholder
+                    iframe.srcdoc = `
+                        <!DOCTYPE html>
+                        <html>
+                        <head>
+                            <style>
+                                body {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 100%;
+                                    margin: 0;
+                                    font-family: Arial, sans-serif;
+                                    background-color: #f8fafc;
+                                }
+                                .placeholder {
+                                    text-align: center;
+                                    padding: 2rem;
+                                }
+                                h1 {
+                                    color: #1e293b;
+                                    margin-bottom: 1rem;
+                                }
+                                p {
+                                    color: #64748b;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="placeholder">
+                                <h1>${tabName.charAt(0).toUpperCase() + tabName.slice(1)} Prototype</h1>
+                                <p>Interactive ${tabName} flow would appear here in a real implementation.</p>
+                                <p>This is a placeholder for demonstration purposes.</p>
+                            </div>
+                        </body>
+                        </html>
+                    `;
+                    
+                    // Hide loading state
+                    loading.classList.add('hidden');
+                }, 800);
+            });
+        });
+        
+        // Initialize first tab
+        document.querySelector('.prototype-tab[data-tab="quoting"]').click();
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #1976d2;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #1976d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #125a9c;
+}
+
+.chat-box {
+  padding: 20px;
+  height: 300px;
+  overflow-y: auto;
+  background: #eee;
+}
+
+.msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.msg.doctor {
+  background: #1976d2;
+  color: white;
+  align-self: flex-start;
+}
+
+.msg.patient {
+  background: #ddd;
+  align-self: flex-end;
+}
+    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthConnect - Dashboard</title>
+  <link rel="stylesheet" href="patient-doctor-prototype\Style\Style.css">
+</head>
+<body>
+  <header>
+    <h2>Welcome !</h2>
+    <nav>
+      <a href="messages.html">Messages</a>
+      <a href="notes.html">Doctor's Notes</a>
+      <a href="tracker.html">Symptom Tracker</a>
+    </nav>
+  </header>
+
+  <main>
+    <h3>Upcoming Appointment</h3>
+    <p>Monday, Sept 22 at 10:00 AM with Dr. Smith</p>
+
+    <h3>Reminders</h3>
+    <ul>
+      <li>Take prescribed medication at 8:00 PM</li>
+      <li>Upload lab results before next appointment</li>
+    </ul>
+  </main>
+</body>
+</html>

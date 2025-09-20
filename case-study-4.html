@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce UX Redesign Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+     <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="C:\Users\despi\OneDrive\Documents\Portfolio\Home-page.html" class="text-xl font-bold text-indigo-600">Dez Sima</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                  <a href="all-my-projects.html" class="text-gray-700 hover:text-indigo-600 transition">Work</a>
+                    <a href="resume.html#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                  <a href="resume.html#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html#work" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Work</a>
+            <a href="index.html#abouclass="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About</a>
+            <a href="index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">E-Commerce Platform Redesign</h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">Improving conversion rates through strategic UX enhancements for an eBay-like marketplace</p>
+                    <a href="e-commerce-platform-prototype\index.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-gray-100 transition">
+                        View prototype
+                        <i data-feather="arrow-right" class="ml-2"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="Images\What_is_E_commerce_and_What_are_its_Applications_2_d2eb0d4402.webp" alt="E-Commerce Platform" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Project Overview</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">The Challenge</h3>
+                    <p class="text-gray-600 mb-6">The existing platform had a conversion rate below industry standards, with users abandoning purchases due to confusing navigation, overwhelming product pages, and a lengthy checkout process.</p>
+                    <p class="text-gray-600">Our goal was to redesign the user experience to increase conversion rates by at least 25% while maintaining the platform's core functionality.</p>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                                <i data-feather="target" class="text-indigo-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium text-gray-800">Key Objectives</h4>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                                <span>Simplify product discovery and comparison</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                                <span>Streamline the checkout process</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                                <span>Improve trust signals throughout the journey</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2 mt-1"></i>
+                                <span>Enhance mobile experience</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">User Research</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i data-feather="users" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">User Interviews</h3>
+                    <p class="text-gray-600">Conducted 50+ interviews with both buyers and sellers to understand pain points and expectations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i data-feather="activity" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Analytics Review</h3>
+                    <p class="text-gray-600">Analyzed 6 months of user behavior data to identify drop-off points and navigation patterns.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i data-feather="trending-up" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Competitive Analysis</h3>
+                    <p class="text-gray-600">Benchmarked against 8 leading e-commerce platforms to identify best practices and opportunities.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Key Findings</h3>
+                        <div class="space-y-6">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <i data-feather="alert-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Information Overload</h4>
+                                    <p class="mt-2 text-gray-600">Product pages contained too much unstructured information, overwhelming users.</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <i data-feather="clock"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Checkout Friction</h4>
+                                    <p class="mt-2 text-gray-600">The 5-step checkout process led to 68% cart abandonment.</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <i data-feather="smartphone"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Mobile Challenges</h4>
+                                    <p class="mt-2 text-gray-600">Mobile users struggled with small touch targets and slow loading media.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
+                        <img src="http://static.photos/technology/640x360/23" alt="User Research Data" class="rounded-lg shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Section -->
+    <section id="design" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Design Solutions</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-20">
+                <div data-aos="fade-right">
+                    <div class="bg-indigo-100 p-4 rounded-lg inline-block mb-6">
+                        <i data-feather="search" class="text-indigo-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Streamlined Product Discovery</h3>
+                    <p class="text-gray-600 mb-6">Redesigned the search and filtering system to help users find relevant products faster. Implemented:</p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Smart search with autocomplete and suggestions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Visual filters with real-time results</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Personalized recommendations based on browsing history</span>
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="http://static.photos/technology/640x360/45" alt="Product Discovery Design" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-20">
+                <div class="md:order-2" data-aos="fade-left">
+                    <div class="bg-indigo-100 p-4 rounded-lg inline-block mb-6">
+                        <i data-feather="shopping-cart" class="text-indigo-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Optimized Product Pages</h3>
+                    <p class="text-gray-600 mb-6">Restructured product pages to highlight key information and improve scannability:</p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Tabbed information architecture for better organization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Sticky "Add to Cart" section for quick access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Enhanced media gallery with zoom and 360° view</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:order-1" data-aos="fade-right">
+                    <img src="http://static.photos/technology/640x360/46" alt="Product Page Design" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <div class="bg-indigo-100 p-4 rounded-lg inline-block mb-6">
+                        <i data-feather="credit-card" class="text-indigo-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Simplified Checkout Flow</h3>
+                    <p class="text-gray-600 mb-6">Reduced the checkout process from 5 steps to 2 while maintaining all necessary information:</p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Guest checkout option prominently displayed</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Auto-fill for returning customers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-green-500 mr-2 mt-1"></i>
+                            <span>Multiple payment options with security badges</span>
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="http://static.photos/technology/640x360/47" alt="Checkout Design" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Measurable Results</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-lg shadow-sm text-center card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-5xl font-bold text-indigo-600 mb-4">+32%</div>
+                    <h3 class="text-xl font-semibold mb-3">Conversion Rate</h3>
+                    <p class="text-gray-600">Increase in completed purchases after implementation</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm text-center card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-5xl font-bold text-indigo-600 mb-4">-42%</div>
+                    <h3 class="text-xl font-semibold mb-3">Cart Abandonment</h3>
+                    <p class="text-gray-600">Reduction in abandoned carts during checkout</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm text-center card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-5xl font-bold text-indigo-600 mb-4">4.8★</div>
+                    <h3 class="text-xl font-semibold mb-3">User Satisfaction</h3>
+                    <p class="text-gray-600">Average rating from post-launch surveys</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Key Takeaways</h3>
+                        <p class="text-gray-600 mb-6">This project demonstrated how thoughtful UX improvements can significantly impact business metrics in e-commerce. The redesign focused on removing friction points while maintaining the platform's robust functionality.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i data-feather="zap" class="text-indigo-600"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-gray-600">Simplifying complex processes doesn't mean removing features—it means making them more intuitive.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i data-feather="zap" class="text-indigo-600"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-gray-600">Mobile optimization is no longer optional—it's critical for e-commerce success.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i data-feather="zap" class="text-indigo-600"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-gray-600">Trust signals (reviews, security badges, clear policies) significantly impact conversion rates.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
+                        <img src="http://static.photos/technology/640x360/48" alt="Results Dashboard" class="rounded-lg shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-8">View Another Project</h2>
+                <a href="C:\Users\despi\OneDrive\Documents\Portfolio\case-study-2.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition">
+                    E Commerce Redesign
+                    <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dezign Hub</h3>
+                    <p class="text-gray-400">Showcasing impactful design solutions for complex problems.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Work</h4>
+                    <ul class="space-y-2">
+                        <li><a href="case-study-1.html" class="text-gray-400 hover:text-white transition">Fintech</a></li>
+                        <li><a href="case-study-2.html" class="text-gray-400 hover:text-white transition">Healthcare</a></li>
+                        <li><a href="case-study-3.html" class="text-gray-400 hover:text-white transition">E-learning</a></li>
+                        <li><a href="case-study-5.html" class="text-gray-400 hover:text-white transition">Travel</a></li>
+                        <li><a href="case-study-6.html" class="text-gray-400 hover:text-white transition">Synergy flow</a></li>
+                        <li><a href="case-study-7.html" class="text-gray-400 hover:text-white transition">Resto flow</a></li>
+                        <li><a href="Artfolio.html" class="text-gray-400 hover:text-white transition">Artwork</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Experience</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Approach</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="mail"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 UX Portfolio. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        feather.replace();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

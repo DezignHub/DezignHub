@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dez Sima | Junior UX Designer/ Front-End Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        .skill-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 1.25rem;
+            top: 2.5rem;
+            height: calc(100% - 2.5rem);
+            width: 2px;
+            background: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                   <a href="C:\Users\despi\OneDrive\Documents\Portfolio\Home-page.html" class="text-xl font-bold text-indigo-600">Dez Sima</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="#experience" class="text-gray-700 hover:text-blue-600 transition">Experience</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-600 transition">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">About</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Experience</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Skills</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Projects</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                        Hi, I'm <span class="gradient-text">Dez Sima</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">
+                        Junior UX Designer/ Front-End Developer with a background in Restaurant Management & Quality Control
+                    </h2>
+                    <p class="text-gray-600 mb-8 max-w-lg">
+                        I combine user-centered design principles with operational excellence to create intuitive digital experiences that delight users and drive business results.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">Hire Me</a>
+                        <a href="#projects" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition">View Work</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-xl overflow-hidden border-4 border-white">
+                            <img src="Images\IMG_1109 Copy.JPG" alt="Profile Photo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-full shadow-lg">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i data-feather="award" class="text-blue-600 w-6 h-6"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16" data-aos="fade-up">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center" data-aos="fade-right">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <img src="http://static.photos/workspace/640x360/456" alt="UX Design" class="rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">UX Philosophy</h3>
+                        <p class="text-gray-600">Creating intuitive interfaces that solve real problems through research and iteration.</p>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12" data-aos="fade-left">
+                    <p class="text-gray-600 mb-6">
+                        As a former restaurant manager and quality control specialist, I developed a keen eye for detail and a deep understanding of customer needs. This unique background allows me to approach UX design with a service-oriented mindset, always prioritizing the end-user's experience.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        My transition into UX design was driven by a passion for creating digital experiences that are as seamless and enjoyable as a well-run restaurant. I bring operational efficiency, problem-solving skills, and customer empathy to every project.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        When I'm not designing, you can find me exploring new food trends, sketching in my notebook, or conducting informal usability tests with friends and family.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i data-feather="map-pin" class="text-blue-600 w-5 h-5"></i>
+                            </div>
+                            <span class="text-gray-700">Based in New Jersey</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                <i data-feather="briefcase" class="text-purple-600 w-5 h-5"></i>
+                            </div>
+                            <span class="text-gray-700">Available for freelance</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-green-100 p-2 rounded-full mr-3">
+                                <i data-feather="heart" class="text-green-600 w-5 h-5"></i>
+                            </div>
+                            <span class="text-gray-700">Food & UX enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16" data-aos="fade-up">My Journey</h2>
+            <div class="max-w-3xl mx-auto">
+                <!-- UX Experience -->
+                <div class="mb-16" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6 pb-2 border-b border-gray-200">UX Design Experience</h3>
+                    <div class="space-y-8 relative">
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item pl-10 relative">
+                            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
+                                <i data-feather="layout" class="text-white w-5 h-5"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                                    <h4 class="text-lg font-semibold text-gray-800">Junior UX Designer</h4>
+                                    <span class="text-sm text-gray-500">2025 </span>
+                                </div>
+                                <p class="text-gray-600 mb-3">Fintech</p>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>Conducted user research and created personas for Fintech App</li>
+                                    <li>Designed wireframes and prototypes using Figma</li>
+                                    <li>Collaborated with developers to implement designs</li>
+                                    <li>Performed usability testing and iterated on designs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item pl-10 relative">
+                            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center">
+                                <i data-feather="monitor" class="text-white w-5 h-5"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                                    <h4 class="text-lg font-semibold text-gray-800">UX Design Bootcamp</h4>
+                                    <span class="text-sm text-gray-500">2021 - 2022</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">Google UX/UI</p>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>Completed intensive 6-month program in UX/UI design</li>
+                                    <li>Developed 3 portfolio projects from research to high-fidelity prototypes</li>
+                                    <li>Learned industry-standard tools like Figma, Adobe XD, and Miro</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Previous Career -->
+                <div data-aos="fade-up">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6 pb-2 border-b border-gray-200">Previous Career in Hospitality</h3>
+                    <div class="space-y-8 relative">
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item pl-10 relative">
+                            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-green-600 flex items-center justify-center">
+                                <i data-feather="star" class="text-white w-5 h-5"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                                    <h4 class="text-lg font-semibold text-gray-800">Restaurant Manager</h4>
+                                    <span class="text-sm text-gray-500">2020 - 2024</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">Shake Shack</p>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>Led a team of 25 staff members with a focus on customer experience</li>
+                                    <li>Implemented new POS system, improving order accuracy by 30%</li>
+                                    <li>Redesigned menu layout based on customer feedback and sales data</li>
+                                    <li>Maintained 4.8/5 average customer satisfaction rating</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 4 -->
+                        <div class="timeline-item pl-10 relative">
+                            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-yellow-600 flex items-center justify-center">
+                                <i data-feather="check-circle" class="text-white w-5 h-5"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                                    <h4 class="text-lg font-semibold text-gray-800">Quality Control Specialist</h4>
+                                    <span class="text-sm text-gray-500">2024 - 2025</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">Wonder</p>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>Developed and implemented quality assurance protocols</li>
+                                    <li>Conducted audits and created detailed reports with actionable insights</li>
+                                    <li>Trained staff on quality standards and procedures</li>
+                                    <li>Reduced customer complaints by 45% through process improvements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16" data-aos="fade-up">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- UX Skills -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="user" class="text-blue-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">UX Design</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">User Research</span>
+                        <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Personas</span>
+                        <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">User Flows</span>
+                        <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Wireframing</span>
+                        <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Prototyping</span>
+                        <span class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Usability Testing</span>
+                        
+                        
+                    </div>
+                </div>
+                
+                <!-- UI Skills -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="layout" class="text-purple-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">UI Design</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Figma</span>
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Adobe XD</span>
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Sketch</span>
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Visual Design</span>
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Design Systems</span>
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Responsive Design</span>
+                    </div>
+                </div>
+
+               
+                        
+                </div>
+                <!-- Dev Skills -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="layout" class="text-yellow-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Dev</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                
+                <!-- Transferable Skills -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="refresh-cw" class="text-green-600 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Transferable Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Customer Empathy</span>
+                        <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Process Improvement</span>
+                        <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Team Leadership</span>
+                        <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Quality Assurance</span>
+                        <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Problem Solving</span>
+                        <span class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Attention to Detail</span>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16" data-aos="fade-up">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/1" alt="Restaurant App Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Restaurant Management App</h3>
+                        <p class="text-gray-600 mb-4">A mobile app that helps restaurant managers streamline operations and improve customer service.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="case-study-7.html" class="text-blue-600 hover:text-blue-800 font-medium">View Case Study →</a>
+                            <div class="flex space-x-2">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">UX Research</span>
+                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Mobile Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Images\travel booking.avif" alt="Travel booking" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Travel booking app</h3>
+                        <p class="text-gray-600 mb-4">Streamlined booking experience.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="case-study-5.html" class="text-blue-600 hover:text-blue-800 font-medium">View Case Study →</a>
+                            <div class="flex space-x-2">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">User Testing</span>
+                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">UI Redesign</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Images\healthcare platform.jpg" alt="Healthcare Platform" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Healthcare platform</h3>
+                        <p class="text-gray-600 mb-4">Designed for better patient-doctor communication.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">View Case Study →</a>
+                            <div class="flex space-x-2">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Workflow Design</span>
+                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Desktop App</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="all-my-projects.html" class="inline-block border border-blue-600 text-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Let's Connect</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8" data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-6">Get in Touch</h3>
+                    <p class="mb-8 opacity-90">I'm currently available for freelance projects or full-time positions. Feel free to reach out to discuss how I can contribute to your team or project.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i data-feather="mail" class="w-5 h-5"></i>
+                            </div>
+                            <span>despirs@yahoo.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i data-feather="phone" class="w-5 h-5"></i>
+                            </div>
+                            <span>(551) 392 3896</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i data-feather="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <span>Roselle, New Jersey</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 mt-8">
+                        <a href="#" class="bg-white text-blue-600 p-3 rounded-full hover:bg-gray-100 transition">
+                            <i data-feather="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-white text-blue-600 p-3 rounded-full hover:bg-gray-100 transition">
+                            <i data-feather="dribbble" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-white text-blue-600 p-3 rounded-full hover:bg-gray-100 transition">
+                            <i data-feather="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-white text-blue-600 p-3 rounded-full hover:bg-gray-100 transition">
+                            <i data-feather="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <form class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl">
+                        <div class="mb-6">
+                            <label for="name" class="block mb-2 font-medium">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-white placeholder-opacity-70">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2 font-medium">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-white placeholder-opacity-70">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-white placeholder-opacity-70"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-blue-600 py-3 px-6 rounded-md font-medium hover:bg-gray-100 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold gradient-text">UX Portfolio</span>
+                    <p class="text-gray-400 mt-2">Creating meaningful digital experiences</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-6 mb-4">
+                        <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
+                        <a href="#experience" class="text-gray-400 hover:text-white transition">Experience</a>
+                        <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
+                        <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+                    </div>
+                    <p class="text-gray-500 text-sm">© 2023 [Your Name]. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        feather.replace();
+        
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Communication Platform Case Study | UX Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+        .section-divider {
+            position: relative;
+            height: 100px;
+        }
+        .section-divider::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 100px;
+            background: #fff;
+            transform: skewY(-2deg);
+            transform-origin: bottom left;
+        }
+         .prototype-frame {
+      width: 100%;
+      height: 600px; /* adjust height as needed */
+      border: 1px solid #ccc;
+      border-radius: 8px;
+         }
+         .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #1976d2;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #125a9c;
+}
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-indigo-600">Dez Sima</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="all-my-projects.html" class="text-gray-700 hover:text-indigo-600 transition">Work</a>
+                    <a href="resume.html#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                  <a href="resume.html#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-24 pb-32 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <span class="inline-block px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm mb-4">Case Study</span>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Improving Patient-Doctor Communication Through Digital Innovation</h1>
+                    <p class="text-lg md:text-xl mb-8 opacity-90">A healthcare platform designed to streamline communication, reduce wait times, and improve patient outcomes.</p>
+                    <div class="flex space-x-4">
+                        <a href="patient-doctor-prototype/index.html" target="_blank" class="btn">
+  View Prototype
+</a>
+                        <button class="px-6 py-3 border border-white text-white rounded-lg font-medium hover:bg-white hover:bg-opacity-10 transition">Read Case Study</button>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="http://static.photos/medical/1200x630/42" alt="Healthcare App Mockup" class="rounded-xl shadow-2xl border-8 border-white border-opacity-20">
+                </div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Project Overview</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="target" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">The Challenge</h3>
+                    <p class="text-gray-600">Patients reported frustration with long wait times and difficulty communicating with healthcare providers between visits.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="eye" class="text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">The Solution</h3>
+                    <p class="text-gray-600">A secure messaging platform with AI-assisted symptom tracking and automated appointment updates.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="award" class="text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">The Impact</h3>
+                    <p class="text-gray-600">Reduced phone inquiries by 40% and improved patient satisfaction scores by 35% in pilot clinics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6">Understanding the Problem Space</h2>
+                    <p class="text-gray-600 mb-6">Through interviews with both patients and healthcare providers, we identified key pain points in current communication channels:</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-0.5"></i>
+                            <span>72% of patients felt their questions weren't fully answered during visits</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-0.5"></i>
+                            <span>Doctors spent 25% of their time on administrative communication</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-green-500 mr-2 mt-0.5"></i>
+                            <span>Critical test results were often delayed reaching patients</span>
+                        </li>
+                    </ul>
+                    <button class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition">View Research Findings</button>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="http://static.photos/medical/640x360/12" alt="Research data visualization" class="rounded-xl shadow-lg">
+                    <div class="mt-4 flex justify-center">
+                        <div class="inline-flex space-x-1">
+                            <div class="w-2 h-2 rounded-full bg-indigo-600"></div>
+                            <div class="w-2 h-2 rounded-full bg-indigo-300"></div>
+                            <div class="w-2 h-2 rounded-full bg-indigo-300"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Design Process</h2>
+            <div class="relative">
+                <div class="hidden md:block absolute left-1/2 h-full w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
+                <!-- Timeline Item 1 -->
+                <div class="mb-16" data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0">
+                            <h3 class="text-2xl font-semibold mb-3">Discovery & Research</h3>
+                            <p class="text-gray-600">Conducted 30+ interviews with patients, doctors, and administrative staff to map current workflows and pain points.</p>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <img src="http://static.photos/office/640x360/5" alt="Research phase" class="rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+                <!-- Timeline Item 2 -->
+                <div class="mb-16" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 order-2 md:order-1">
+                            <img src="http://static.photos/technology/640x360/7" alt="Wireframing phase" class="rounded-lg shadow-md">
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 order-1 md:order-2">
+                            <h3 class="text-2xl font-semibold mb-3">Wireframing & Prototyping</h3>
+                            <p class="text-gray-600">Developed low-fidelity prototypes tested with 5 medical practices to validate core functionality.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Timeline Item 3 -->
+                <div class="mb-16" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0">
+                            <h3 class="text-2xl font-semibold mb-3">User Testing & Iteration</h3>
+                            <p class="text-gray-600">Conducted 3 rounds of testing with patients and doctors to refine the interface and workflows.</p>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <img src="http://static.photos/people/640x360/9" alt="Testing phase" class="rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Key Features</h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-sm" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-feather="message-square" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Secure Messaging</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">HIPAA-compliant direct messaging between patients and their care team with read receipts and priority tagging.</p>
+                    <img src="http://static.photos/technology/640x360/22" alt="Secure messaging interface" class="rounded-lg">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-feather="calendar" class="text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Appointment Management</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Automated reminders, easy rescheduling, and waitlist notifications to reduce no-shows by 28%.</p>
+                    <img src="http://static.photos/technology/640x360/23" alt="Appointment interface" class="rounded-lg">
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-feather="clipboard" class="text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Health Tracking</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Patients can log symptoms and vital signs that automatically populate their medical records.</p>
+                    <img src="http://static.photos/technology/640x360/24" alt="Health tracking interface" class="rounded-lg">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-feather="file-text" class="text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Test Results</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Automated notifications when results are ready with physician notes and follow-up actions.</p>
+                    <img src="http://static.photos/technology/640x360/25" alt="Test results interface" class="rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcome Section -->
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Measurable Impact</h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">The platform transformed patient-provider communication at our pilot locations</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold mb-2">40%</div>
+                    <p class="opacity-90">Reduction in phone inquiries</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold mb-2">35%</div>
+                    <p class="opacity-90">Increase in patient satisfaction</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-bold mb-2">28%</div>
+                    <p class="opacity-90">Fewer no-shows</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl font-bold mb-2">3.2h</div>
+                    <p class="opacity-90">Weekly time saved per provider</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflection -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6">Key Learnings</h2>
+                    <p class="text-gray-600 mb-6">This project reinforced several important lessons about designing for healthcare:</p>
+                    <ul class="space-y-4">
+                        <li class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center">
+                                    <i data-feather="alert-circle" class="text-indigo-600"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium">Security is non-negotiable</h4>
+                                <p class="text-gray-600 mt-1">Every design decision needed to prioritize patient privacy and data security.</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">
+                                    <i data-feather="users" class="text-pink-600"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium">Both sides matter</h4>
+                                <p class="text-gray-600 mt-1">Solutions must work for overburdened providers as well as anxious patients.</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                                    <i data-feather="clock" class="text-purple-600"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium">Implementation takes time</h4>
+                                <p class="text-gray-600 mt-1">Changing workflows in healthcare requires extensive training and gradual adoption.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="http://static.photos/office/640x360/15" alt="Team discussing designs" class="rounded-xl shadow-lg">
+                    <div class="mt-6 bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-semibold mb-3">Next Steps</h3>
+                        <p class="text-gray-600 mb-4">Expanding to specialty care and integrating with more EHR systems to reach additional patient populations.</p>
+                        <button class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition">View Project Roadmap</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Next Project -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-8">View Another Project</h2>
+                <a href="case-study-3.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition">
+                    E-learning platform
+                    <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dezign Hub</h3>
+                    <p class="text-gray-400">Showcasing impactful design solutions for complex problems.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Work</h4>
+                    <ul class="space-y-2">
+                       <li><a href="case-study-1.html" class="text-gray-400 hover:text-white transition">Fintech</a></li>
+                        <li><a href="case-study-3.html" class="text-gray-400 hover:text-white transition">E-learning</a></li>
+                        <li><a href="case-study-4.html" class="text-gray-400 hover:text-white transition">E-commerce</a></li>
+                        <li><a href="case-study-5.html" class="text-gray-400 hover:text-white transition">Travel</a></li>
+                        <li><a href="case-study-6.html" class="text-gray-400 hover:text-white transition">Synergy flow</a></li>
+                        <li><a href="case-study-7.html" class="text-gray-400 hover:text-white transition">Resto flow</a></li>
+                        <li><a href="Artfolio.html" class="text-gray-400 hover:text-white transition">Artwork</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Experience</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Approach</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="mail"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 UX Portfolio. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>

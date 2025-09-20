@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Quoting Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .form-step {
+            display: none;
+        }
+        .form-step.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .progress-bar {
+            height: 6px;
+            background-color: #E2E8F0;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #3B82F6;
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-2xl">
+        <!-- Header -->
+        <div class="bg-blue-600 text-white p-6">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-2xl font-bold">Get a Quote</h1>
+                    <p class="text-blue-100">Simple, fast, and tailored to you</p>
+                </div>
+                <div class="bg-blue-500 p-3 rounded-lg">
+                    <i data-feather="shield" class="w-6 h-6"></i>
+                </div>
+            </div>
+            
+            <!-- Progress bar -->
+            <div class="mt-6">
+                <div class="progress-bar rounded-full">
+                    <div class="progress-fill rounded-full" style="width: 25%"></div>
+                </div>
+                <div class="flex justify-between mt-2 text-sm text-blue-200">
+                    <span>Step 1 of 4</span>
+                    <span>25% complete</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Form steps -->
+        <div class="p-6">
+            <!-- Step 1 -->
+            <div class="form-step active" id="step1">
+                <h2 class="text-xl font-semibold mb-4">What would you like to insure?</h2>
+                
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <button class="option-card p-4 border rounded-lg hover:border-blue-500 hover:bg-blue-50 transition">
+                        <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                            <i data-feather="home" class="text-blue-600"></i>
+                        </div>
+                        <p class="font-medium">Home</p>
+                    </button>
+                    <button class="option-card p-4 border rounded-lg hover:border-blue-500 hover:bg-blue-50 transition">
+                        <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                            <i data-feather="car" class="text-blue-600"></i>
+                        </div>
+                        <p class="font-medium">Auto</p>
+                    </button>
+                    <button class="option-card p-4 border rounded-lg hover:border-blue-500 hover:bg-blue-50 transition">
+                        <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                            <i data-feather="heart" class="text-blue-600"></i>
+                        </div>
+                        <p class="font-medium">Health</p>
+                    </button>
+                    <button class="option-card p-4 border rounded-lg hover:border-blue-500 hover:bg-blue-50 transition">
+                        <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                            <i data-feather="umbrella" class="text-blue-600"></i>
+                        </div>
+                        <p class="font-medium">Life</p>
+                    </button>
+                </div>
+                
+                <div class="flex justify-end">
+                    <button class="next-step bg-blue-600 text-white px-6 py-2 rounded-lg">Continue</button>
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="form-step" id="step2">
+                <h2 class="text-xl font-semibold mb-4">Tell us about your home</h2>
+                
+                <div class="space-y-4 mb-6">
+                    <div>
+                        <label class="block text-gray-700 mb-1">Home address</label>
+                        <input type="text" class="w-full p-3 border rounded-lg" placeholder="123 Main St, Anytown">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700 mb-1">Year built</label>
+                            <select class="w-full p-3 border rounded-lg">
+                                <option>Select year</option>
+                                <option>2020-2023</option>
+                                <option>2010-2019</option>
+                                <option>2000-2009</option>
+                                <option>Before 2000</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-1">Square footage</label>
+                            <input type="text" class="w-full p-3 border rounded-lg" placeholder="e.g. 1800">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-1">Home type</label>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button class="p-2 border rounded hover:border-blue-500 hover:bg-blue-50">Single-family</button>
+                            <button class="p-2 border rounded hover:border-blue-500 hover:bg-blue-50">Condo</button>
+                            <button class="p-2 border rounded hover:border-blue-500 hover:bg-blue-50">Townhouse</button>
+                            <button class="p-2 border rounded hover:border-blue-500 hover:bg-blue-50">Apartment</button>
+                            <button class="p-2 border rounded hover:border-blue-500 hover:bg-blue-50">Mobile</button>
+                            <button class="p-2 border rounded hover:border-blue-500 hover:bg-blue-50">Other</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between">
+                    <button class="prev-step text-blue-600 px-6 py-2 rounded-lg">Back</button>
+                    <button class="next-step bg-blue-600 text-white px-6 py-2 rounded-lg">Continue</button>
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="form-step" id="step3">
+                <h2 class="text-xl font-semibold mb-4">Coverage options</h2>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="p-4 border rounded-lg">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-medium">Dwelling coverage</h3>
+                            <span class="text-blue-600 font-semibold">$300,000</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">Covers damage to your home's structure from covered events like fire or wind.</p>
+                        <input type="range" class="w-full" min="100000" max="500000" step="50000" value="300000">
+                        <div class="flex justify-between text-xs text-gray-500 mt-1">
+                            <span>$100K</span>
+                            <span>$500K</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-4 border rounded-lg">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-medium">Personal property</h3>
+                            <span class="text-blue-600 font-semibold">$150,000</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">Covers your belongings like furniture, electronics, and clothing.</p>
+                        <input type="range" class="w-full" min="50000" max="300000" step="25000" value="150000">
+                        <div class="flex justify-between text-xs text-gray-500 mt-1">
+                            <span>$50K</span>
+                            <span>$300K</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-4 border rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <input type="checkbox" id="flood" class="mr-2">
+                            <label for="flood" class="font-medium">Flood insurance</label>
+                        </div>
+                        <p class="text-gray-600 text-sm">Add coverage for flood damage, which isn't included in standard policies.</p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between">
+                    <button class="prev-step text-blue-600 px-6 py-2 rounded-lg">Back</button>
+                    <button class="next-step bg-blue-600 text-white px-6 py-2 rounded-lg">Continue</button>
+                </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="form-step" id="step4">
+                <h2 class="text-xl font-semibold mb-4">About you</h2>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700 mb-1">First name</label>
+                            <input type="text" class="w-full p-3 border rounded-lg" placeholder="John">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-1">Last name</label>
+                            <input type="text" class="w-full p-3 border rounded-lg" placeholder="Doe">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-1">Email</label>
+                        <input type="email" class="w-full p-3 border rounded-lg" placeholder="john@example.com">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-1">Phone number</label>
+                        <input type="tel" class="w-full p-3 border rounded-lg" placeholder="(555) 123-4567">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 mb-1">Birth date</label>
+                        <input type="date" class="w-full p-3 border rounded-lg">
+                    </div>
+                </div>
+                
+                <div class="flex justify-between">
+                    <button class="prev-step text-blue-600 px-6 py-2 rounded-lg">Back</button>
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-lg">Get My Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+        
+        // Form step navigation
+        let currentStep = 1;
+        const totalSteps = 4;
+        
+        function updateProgress() {
+            const percent = (currentStep / totalSteps) * 100;
+            document.querySelector('.progress-fill').style.width = `${percent}%`;
+            document.querySelector('.progress-fill').nextElementSibling.firstElementChild.textContent = `Step ${currentStep} of ${totalSteps}`;
+        }
+        
+        document.querySelectorAll('.next-step').forEach(button => {
+            button.addEventListener('click', function() {
+                document.getElementById(`step${currentStep}`).classList.remove('active');
+                currentStep++;
+                document.getElementById(`step${currentStep}`).classList.add('active');
+                updateProgress();
+            });
+        });
+        
+        document.querySelectorAll('.prev-step').forEach(button => {
+            button.addEventListener('click', function() {
+                document.getElementById(`step${currentStep}`).classList.remove('active');
+                currentStep--;
+                document.getElementById(`step${currentStep}`).classList.add('active');
+                updateProgress();
+            });
+        });
+        
+        // Option card selection
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.option-card').forEach(c => {
+                    c.classList.remove('border-blue-500', 'bg-blue-50');
+                });
+                this.classList.add('border-blue-500', 'bg-blue-50');
+            });
+        });
+    </script>
+</body>
+</html>
